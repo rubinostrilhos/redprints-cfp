@@ -19,49 +19,50 @@ export default function Index({ oauth_providers }: IndexProps) {
   return (
     <Layout currentUser={user}>
       <div className="bg-primary-700 shadow-medium animate-fade-in mb-12 rounded-xl p-8 text-white">
-      <div className="flex grid grid-flow-row sm:grid-flow-col">
-        <div className=""><h1 className="mb-4 text-3xl font-bold text-white md:text-4xl">
-          Call for Proposals - Tropical on Rails 26
-        </h1>
-        <p className="text-cloud-50 max-w-3xl text-lg">
-          <a
-            href="https://tropicalonrails.com"
-            target="_blank"
-            className="underline"
-            rel="noreferrer"
-          >
-            Tropical on Rails
-          </a>{" "}
-          returns for its 5th edition, welcoming 700 Rails enthusiasts for two
-          days of learning, energy, and celebration. Your talk could inspire
-          hundreds of developers building products across Latin America and
-          beyond.
-        </p>
-        <div className="text-primary-100 mt-8 flex flex-wrap gap-4">
-          <div className="flex items-center">
-            <CalendarIcon className="mr-2 h-5 w-5" />
-            <span>April 9-10, 2026</span>
+        <div className="flex grid grid-flow-row sm:grid-flow-col">
+          <div className="">
+            <h1 className="mb-4 text-3xl font-bold text-white md:text-4xl">
+              Call for Proposals - Tropical on Rails 26
+            </h1>
+            <p className="text-cloud-50 max-w-3xl text-lg">
+              <a
+                href="https://tropicalonrails.com"
+                target="_blank"
+                className="underline"
+                rel="noreferrer"
+              >
+                Tropical on Rails
+              </a>{" "}
+              returns for its 5th edition, welcoming 700 Rails enthusiasts for
+              two days of learning, energy, and celebration. Your talk could
+              inspire hundreds of developers building products across Latin
+              America and beyond.
+            </p>
+            <div className="text-primary-100 mt-8 flex flex-wrap gap-4">
+              <div className="flex items-center">
+                <CalendarIcon className="mr-2 h-5 w-5" />
+                <span>April 9-10, 2026</span>
+              </div>
+              <div className="flex items-center">
+                <MapPinIcon className="mr-2 h-5 w-5" />
+                <span>São Paulo - Brazil</span>
+              </div>
+              <div className="flex items-center">
+                <UsersIcon className="mr-2 h-5 w-5" />
+                <span>700+ Attendees</span>
+              </div>
+            </div>
           </div>
-          <div className="flex items-center">
-            <MapPinIcon className="mr-2 h-5 w-5" />
-            <span>São Paulo - Brazil</span>
-          </div>
-          <div className="flex items-center">
-            <UsersIcon className="mr-2 h-5 w-5" />
-            <span>700+ Attendees</span>
+          <div className="">
+            <img className="mt-12 w-full sm:mt-0" src="/logo_full.svg" alt="" />
           </div>
         </div>
-        </div>  
-        <div className="">
-          <img className="mt-12 w-full sm:mt-0 w-full" src="/logo_full.svg" alt="" />
-        </div> 
-      </div>
       </div>
 
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
         <div className="animate-slide-up space-y-8">
           <div>
-            <h2 className="text-white mb-4 text-2xl font-bold">
+            <h2 className="mb-4 text-2xl font-bold text-white">
               Quick Summary
             </h2>
             <div className="space-y-6">
@@ -78,7 +79,7 @@ export default function Index({ oauth_providers }: IndexProps) {
           </div>
 
           <div>
-            <h2 className="text-white mb-4 text-2xl font-bold">
+            <h2 className="mb-4 text-2xl font-bold text-white">
               What we are looking for:
             </h2>
             <div className="space-y-6">
@@ -129,7 +130,7 @@ export default function Index({ oauth_providers }: IndexProps) {
           </div>
 
           <div>
-            <h2 className="text-white mb-4 text-2xl font-bold">
+            <h2 className="mb-4 text-2xl font-bold text-white">
               What we are NOT looking for:
             </h2>
             <div className="space-y-6">
@@ -144,7 +145,7 @@ export default function Index({ oauth_providers }: IndexProps) {
           </div>
 
           <div>
-            <h2 className="text-white mb-4 text-2xl font-bold">
+            <h2 className="mb-4 text-2xl font-bold text-white">
               Speaker benefits:
             </h2>
             <div className="space-y-6">
@@ -167,7 +168,7 @@ export default function Index({ oauth_providers }: IndexProps) {
           </div>
 
           <div>
-            <h2 className="text-white mb-4 text-2xl font-bold">
+            <h2 className="mb-4 text-2xl font-bold text-white">
               Talk Information:
             </h2>
             <div className="space-y-6">
@@ -183,7 +184,7 @@ export default function Index({ oauth_providers }: IndexProps) {
           </div>
 
           <div>
-            <h2 className="text-white mb-4 text-2xl font-bold">
+            <h2 className="mb-4 text-2xl font-bold text-white">
               Selection Process
             </h2>
             <div className="space-y-4">
@@ -221,7 +222,7 @@ export default function Index({ oauth_providers }: IndexProps) {
           </div>
 
           <div>
-            <h2 className="text-white mb-4 text-2xl font-bold">
+            <h2 className="mb-4 text-2xl font-bold text-white">
               Tips for a Great Proposal
             </h2>
             <div className="space-y-4">
@@ -288,7 +289,7 @@ export default function Index({ oauth_providers }: IndexProps) {
             )}
             {!cfp_closed && (
               <>
-                <h3 className="mb-6 text-gray-800 text-xl font-medium">
+                <h3 className="mb-6 text-xl font-medium text-gray-800">
                   Ready to share your expertise?
                 </h3>
                 <p className="mb-8 text-gray-600">
@@ -329,7 +330,9 @@ export default function Index({ oauth_providers }: IndexProps) {
             className="card border-secondary-800 animate-slide-up border"
             style={{ animationDelay: "0.2s" }}
           >
-            <h3 className="mb-4 text-gray-800 text-xl font-medium">Have questions?</h3>
+            <h3 className="mb-4 text-xl font-medium text-gray-800">
+              Have questions?
+            </h3>
             <p className="mb-6 text-gray-600">
               If you have any questions about the CFP process or need help with
               your proposal, feel free to reach out to our team.

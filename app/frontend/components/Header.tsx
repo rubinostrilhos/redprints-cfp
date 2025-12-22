@@ -43,7 +43,7 @@ export function Header({ currentUser }: HeaderProps) {
             <div className="sm:hidden print:hidden">
               <button
                 onClick={toggleMenu}
-                className="text-white hover:text-primary-400 focus:ring-primary-500 inline-flex items-center justify-center rounded-md p-2 text-neutral-600 hover:bg-neutral-100 focus:ring-2 focus:outline-none focus:ring-inset"
+                className="hover:text-primary-400 focus:ring-primary-500 inline-flex items-center justify-center rounded-md p-2 text-neutral-600 text-white hover:bg-neutral-100 focus:ring-2 focus:outline-none focus:ring-inset"
               >
                 <span className="sr-only">Open main menu</span>
                 {isMenuOpen ? (
@@ -62,8 +62,8 @@ export function Header({ currentUser }: HeaderProps) {
                   href="/proposals/new"
                   className={`text-sm font-medium transition-colors ${
                     url === "/proposals/new"
-                      ? "text-white border-secondary-800 border-b"
-                      : "text-white hover:text-primary-300"
+                      ? "border-secondary-800 border-b text-white"
+                      : "hover:text-primary-300 text-white"
                   }`}
                 >
                   Submit proposal
@@ -74,8 +74,8 @@ export function Header({ currentUser }: HeaderProps) {
                 href="/proposals"
                 className={`text-sm font-medium transition-colors ${
                   url === "/proposals"
-                    ? "text-white border-secondary-800 border-b"
-                    : "text-white hover:text-primary-300"
+                    ? "border-secondary-800 border-b text-white"
+                    : "hover:text-primary-300 text-white"
                 }`}
               >
                 My proposals
