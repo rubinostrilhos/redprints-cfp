@@ -1,0 +1,21 @@
+.ruby-version
+  s_5284bd0d2bc520::t_c80b2f03dd8470 1
+Dockerfile
+  s_5284bd0d2bc520::t_c80b2f03dd8470 4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3464ef5174af4a301bc2c7df7c559c332154c5ec",
+  "prompts": {},
+  "sessions": {
+    "s_5284bd0d2bc520": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "42fbb4b3-4588-48ff-a9a5-970f14e77bcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Cirdes <cirdes@linkana.com>"
+    }
+  }
+}
