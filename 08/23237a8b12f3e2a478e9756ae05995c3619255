@@ -1,0 +1,270 @@
+.agents/skills/layered-rails/examples/authorization-to-policy.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-79
+.agents/skills/layered-rails/references/patterns/state-machines.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-368
+app/controllers/evaluations_controller.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 5
+app/frontend/serializers/EvaluationsProposal.ts
+  s_5284bd0d2bc520::t_dff1892b210ae6 4,12-13
+  s_5284bd0d2bc520::t_164b09d81826aa 1
+.agents/skills/layered-rails/references/gems/active-job-performs.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-171
+.agents/skills/layered-rails/references/gems/workflow.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-305
+.agents/skills/layered-rails/examples/implicit-to-explicit-state-machine.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-77
+.agents/skills/layered-rails/references/patterns/filter-objects.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-222
+.agents/skills/layered-rails/references/patterns/query-objects.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-208
+app/avo/resources/proposal.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 3,12-13,51-72,75,88,129
+.agents/skills/layered-rails/workflows/spec-test.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-282
+spec/requests/reviews_spec.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 11
+app/serializers/cfp_serializer.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 2-3,9-13
+spec/models/proposal_spec.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 4-9
+.agents/skills/layered-rails/references/gems/active-delivery.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-221
+.agents/skills/layered-rails/references/core/specification-test.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-229
+app/frontend/serializers/Evaluation.ts
+  s_5284bd0d2bc520::t_dff1892b210ae6 1,9-10
+.claude/agents/layered-rails/layered-rails-planner.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-6
+.github/workflows/ci.yml
+  s_5284bd0d2bc520::t_dff1892b210ae6 13,28,54
+app/frontend/serializers/Proposal.ts
+  s_5284bd0d2bc520::t_dff1892b210ae6 4,13-14
+  s_5284bd0d2bc520::t_164b09d81826aa 1
+.agents/skills/layered-rails/references/anti-patterns/jobs.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-71
+app/avo/resources/user.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 8
+.agents/skills/layered-rails/examples/current-from-model.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-63
+.agents/skills/layered-rails/references/topics/view-components.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-454
+.agents/skills/layered-rails/references/patterns/repositories.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-382
+app/avo/resources/review.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 3,29-50,67
+skills-lock.json
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-11
+.agents/skills/layered-rails/references/patterns/policy-objects.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-298
+app/frontend/pages/proposals/new.tsx
+  s_5284bd0d2bc520::t_dff1892b210ae6 17
+.agents/skills/layered-rails/workflows/analyze-callbacks.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-255
+.agents/skills/layered-rails/references/gems/action-policy.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-437
+spec/factories/proposals.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 12
+.agents/skills/layered-rails/references/topics/current-attributes.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-307
+spec/requests/evaluations_spec.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 9,20-32
+.agents/skills/layered-rails/references/gems/anyway-config.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-212
+.claude/commands/layered-rails/review.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-16
+.agents/skills/layered-rails/references/patterns/collaborator-objects.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-209
+app/frontend/serializers/CFP.ts
+  s_5284bd0d2bc520::t_dff1892b210ae6 1,8,12
+.agents/skills/layered-rails/workflows/review.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-473
+.agents/skills/layered-rails/references/gems/active-agent.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-275
+.agents/skills/layered-rails/references/gems/view-component.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-223
+.agents/skills/layered-rails/references/core/architecture-layers.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-204
+app/frontend/serializers/index.ts
+  s_5284bd0d2bc520::t_dff1892b210ae6 1,4
+config/initializers/inertia_rails.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 4
+.agents/skills/layered-rails/references/anti-patterns/concerns.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-92
+spec/models/evaluation/distribution_spec.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 10
+config/application.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 32,91
+app/avo/resources/evaluation.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 2-3,6,17-38,54-55,61-63
+  s_5284bd0d2bc520::t_df4cd8e7a95298 64
+.claude/commands/layered-rails/analyze-services.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-14
+.agents/skills/layered-rails/references/patterns/value-objects.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-267
+CLAUDE.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-105
+.claude/commands/layered-rails/analyze-callbacks.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-14
+.agents/skills/layered-rails/references/gems/rubanok.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-246
+.agents/skills/layered-rails/references/patterns/form-objects.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-267
+.claude/agents/layered-rails/layered-rails-reviewer.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-6
+app/frontend/serializers/User.ts
+  s_5284bd0d2bc520::t_dff1892b210ae6 1
+spec/data/cfps.yml.erb
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-2,7,9-15
+spec/requests/proposals_spec.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 9,21-35,75,92,107,127,161
+app/controllers/proposals_controller.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 12,73
+.agents/skills/layered-rails/examples/query-to-query-object.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-63
+.claude/commands/layered-rails/analyze.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-14
+package.json
+  s_5284bd0d2bc520::t_dff1892b210ae6 16-17,21
+.agents/skills/layered-rails/references/topics/ai-integration.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-372
+.agents/skills/layered-rails/workflows/analyze-services.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-1444
+.agents/skills/layered-rails/references/anti-patterns/callbacks.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-114
+.agents/skills/layered-rails/references/patterns/concerns.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-381
+.agents/skills/layered-rails/references/patterns/service-objects.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-170
+.claude/settings.json
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-7
+app/frontend/serializers/Review.ts
+  s_5284bd0d2bc520::t_dff1892b210ae6 1,4,9
+.agents/skills/layered-rails/workflows/analyze.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-376
+app/frontend/types/global.d.ts
+  s_5284bd0d2bc520::t_dff1892b210ae6 3,9
+.agents/skills/layered-rails/examples/god-object-decomposition.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-81
+.agents/skills/layered-rails/references/topics/callbacks.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-336
+db/queue_schema.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 13,17-20,27,36-37,43-44,47-50,61,66-67,72-73,80,83,90,93,100-104,106-107,115,118,126-127,129
+.claude/commands/layered-rails/plan.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-17
+spec/system/pages/proposal_form_page.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 2
+.agents/skills/layered-rails/references/gems/alba.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-257
+spec/requests/evaluations/results_spec.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 11
+.agents/skills/layered-rails/examples/complex-input-to-form-object.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-119
+.agents/skills/layered-rails/examples/callbacks-to-service.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-72
+.agents/skills/layered-rails/references/anti-patterns/layer-violations.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-176
+.agents/skills/layered-rails/references/anti-patterns/testing.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-37
+.agents/skills/layered-rails/workflows/plan.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-249
+Gemfile
+  s_5284bd0d2bc520::t_dff1892b210ae6 4,56,69-70,78-80
+app/models/evaluation/distribution.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 10,42-48
+app/models/cfp.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 3,10-11,13-15,17
+.claude/commands/layered-rails/spec-test.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-13
+db/migrate/20260630112148_add_cfp_id_to_evaluations.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-5
+app/frontend/pages/home/index.tsx
+  s_5284bd0d2bc520::t_dff1892b210ae6 17-20,277-292,322
+spec/factories/evaluations.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 6
+.claude/commands/layered-rails/analyze-gods.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-14
+.claude/hooks/protect-generated-files.sh
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-23
+.agents/skills/layered-rails/references/patterns/presenters.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-257
+CHANGELOG.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-13
+.agents/skills/layered-rails/examples/view-logic-to-presenter.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-60
+.agents/skills/layered-rails/references/anti-patterns/service-objects.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-131
+app/models/evaluation.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 11-14
+app/frontend/pages/reviews/index.tsx
+  s_5284bd0d2bc520::t_dff1892b210ae6 114
+.agents/skills/layered-rails/references/anti-patterns/helpers.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-66
+.agents/skills/layered-rails/references/topics/authorization.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-398
+app/frontend/pages/proposals/index.tsx
+  s_5284bd0d2bc520::t_dff1892b210ae6 13-15
+.agents/skills/layered-rails/references/topics/notifications.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-373
+app/frontend/serializers/Enums.ts
+  s_5284bd0d2bc520::t_164b09d81826aa 1,5
+  s_5284bd0d2bc520::t_dff1892b210ae6 2-4,6
+.agents/skills/layered-rails/references/topics/configuration.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-383
+config/initializers/avo.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 125-131,133
+.agents/skills/layered-rails/workflows/analyze-gods.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-279
+config/initializers/sentry.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 11
+README.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 10-12,58,135,138-139,152-153,183-204,260
+.agents/skills/layered-rails/references/core/extraction-signals.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-314
+.agents/skills/layered-rails/SKILL.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-287
+config/data/cfps.yml
+  s_5284bd0d2bc520::t_3407be85e1e108 2
+.agents/skills/layered-rails/references/patterns/serializers.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-256
+app/models/review.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 7-8
+app/controllers/application_controller.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 10
+app/frontend/serializers/SpeakerProfile.ts
+  s_5284bd0d2bc520::t_dff1892b210ae6 1
+app/forms/proposal_form.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 2
+.agents/skills/layered-rails/references/topics/instrumentation.md
+  s_5284bd0d2bc520::t_dff1892b210ae6 1-386
+app/frontend/components/Header.tsx
+  s_5284bd0d2bc520::t_dff1892b210ae6 16-18
+app/avo/actions/export_speaker_profiles.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 7
+app/models/proposal.rb
+  s_5284bd0d2bc520::t_dff1892b210ae6 7,11
+  s_5284bd0d2bc520::t_c5dfb9f78a950a 12
+.claude/skills/layered-rails
+  s_5284bd0d2bc520::t_f268fae1b182b9 1
+Gemfile.lock
+  s_5284bd0d2bc520::t_cc20de26163f8a 4-8,12-17,19-23,26-28,36-41,44-45,55,57-58,60-64,66-70,72,79,85-86,90-93,96-98,104,107-108,113-118,125-127,129-130,136-138,141-149,164-167,169-170,172-174,182-183,185,187,189,191-192,194,198-200,202,206-210,213-214,219,221-222,225,227,231,233,238-239,241,245-246,253,262-263,266,273,280,288,291,303-304,309-312,314-317,327-329,332-334,343-344,346,348,350-355,358-360,362,368,373-374,376,382-387,390,393-394,396,400-401,405-406,410,412,417,419-430,432,437-438,440-442,447,450,454-458,460-462,464-465,467-470,472,475,478,482-487,491,495,498,500-501,504-505,510-511,513-523,526-529,532-533,535-537,539-543,547,549-554,557,563,565-566,568,571,573-577,582-584,587-590,592-597,600,603,609-610,616-618,631,661,664-667
+bun.lock
+  s_5284bd0d2bc520::t_5e2c1024ca8f6b 3,8,30-31,76,78,80,124-125,132,134,136,138,140,142,144,146,148,150,152,154,156,158,160,162,164,166,200-201,398,544-546,548,550,552,554,556,558,560,562,564,566,602,624-625,644,648,684,746,754-755,778,780,820-821,866-869,884-903,907-910
+db/schema.rb
+  s_5284bd0d2bc520::t_4dba68d690cb1f 13,17-19,27,29-32,44,46,52-53,55,57,59-60,65-66,68,70-71,74-75,77,84-85,88,90,92,102,104-105,107-109,114,118,126-128,130
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0823237a8b12f3e2a478e9756ae05995c3619255",
+  "prompts": {},
+  "sessions": {
+    "s_5284bd0d2bc520": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "42fbb4b3-4588-48ff-a9a5-970f14e77bcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Cirdes <cirdes@linkana.com>"
+    }
+  }
+}
