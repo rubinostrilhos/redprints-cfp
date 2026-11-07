@@ -1,0 +1,22 @@
+spec/models/cfp_data_spec.rb
+  s_5284bd0d2bc520::t_a2ad92283606ea 21
+  s_5284bd0d2bc520::t_1f9f3f7f7ea435 1-20,22-25
+config/data/cfps.yml
+  s_5284bd0d2bc520::t_5642f230859194 5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "112a31005cb8ff740165088a5ba7c197486c1ede",
+  "prompts": {},
+  "sessions": {
+    "s_5284bd0d2bc520": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "42fbb4b3-4588-48ff-a9a5-970f14e77bcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Cirdes <cirdes@linkana.com>"
+    }
+  }
+}
