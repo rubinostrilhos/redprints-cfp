@@ -1,0 +1,24 @@
+config/mailer.yml
+  s_5284bd0d2bc520::t_ba43d487dfc3e4 13-15
+config/smtp.yml
+  s_5284bd0d2bc520::t_204afb9ff935bd 2-3,5
+  s_5284bd0d2bc520::t_ba43d487dfc3e4 6
+config/credentials/production.yml.enc
+  s_5284bd0d2bc520::t_53d6c7fd9d001d 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "44adc0c5dfecbbdce304d4b4ea6420f51b0c8967",
+  "prompts": {},
+  "sessions": {
+    "s_5284bd0d2bc520": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "42fbb4b3-4588-48ff-a9a5-970f14e77bcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Cirdes <cirdes@linkana.com>"
+    }
+  }
+}
