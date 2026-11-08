@@ -2,14 +2,17 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-secondary-800 text-cloud-500 sticky bottom-0 w-full py-8">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="border-secondary-400 mt-8 flex flex-col items-center justify-between border-t pt-6 md:flex-row">
-          {/* FIXME: Add your conference name */}
-          <p className="text-secondary-400 text-sm">
-            &copy; {currentYear} Tropical on Rails
-          </p>
-        </div>
+    <footer className="tema-tinta bg-fundo text-texto-apoio border-traco w-full border-t py-8">
+      <div className="container mx-auto flex flex-col justify-between gap-4 px-4 text-sm sm:px-6 md:flex-row lg:px-8">
+        <p>&copy; {currentYear} Tropical on Rails</p>
+        <a
+          href="https://tropicalonrails.com"
+          target="_blank"
+          rel="noreferrer"
+          className="hover:text-texto transition-colors"
+        >
+          tropicalonrails.com
+        </a>
       </div>
     </footer>
   );

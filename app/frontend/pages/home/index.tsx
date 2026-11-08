@@ -1,10 +1,5 @@
 import { Link, usePage } from "@inertiajs/react";
-import {
-  CalendarIcon,
-  FileTextIcon,
-  MapPinIcon,
-  UsersIcon,
-} from "lucide-react";
+import { FileTextIcon } from "lucide-react";
 
 import Layout from "@/components/Layout";
 import { OAuthButtons } from "@/components/OAuthButtons";
@@ -21,46 +16,73 @@ export default function Index({ oauth_providers }: IndexProps) {
 
   return (
     <Layout currentUser={user}>
-      <div className="from-primary-500 to-primary-700 shadow-medium animate-fade-in mb-12 rounded-xl bg-gradient-to-b p-8 text-white">
-        <h1 className="mb-4 text-3xl font-bold text-white md:text-4xl">
-          Call for Proposals - Tropical on Rails 26
-        </h1>
-        <p className="text-cloud-50 max-w-3xl text-lg">
-          <a
-            href="https://tropicalonrails.com"
-            target="_blank"
-            className="underline"
-            rel="noreferrer"
-          >
-            Tropical on Rails
-          </a>{" "}
-          returns for its 5th edition, welcoming 700 Rails enthusiasts for two
-          days of learning, energy, and celebration. Your talk could inspire
-          hundreds of developers building products across Latin America and
-          beyond.
-        </p>
-        <div className="text-primary-100 mt-8 flex flex-wrap gap-4">
-          <div className="flex items-center">
-            <CalendarIcon className="mr-2 h-5 w-5" />
-            <span>April 9-10, 2026</span>
-          </div>
-          <div className="flex items-center">
-            <MapPinIcon className="mr-2 h-5 w-5" />
-            <span>São Paulo - Brazil</span>
-          </div>
-          <div className="flex items-center">
-            <UsersIcon className="mr-2 h-5 w-5" />
-            <span>700+ Attendees</span>
-          </div>
+      <section className="tema-tinta bg-fundo text-texto border-traco relative left-1/2 -mt-8 mb-14 -ml-[50vw] w-screen overflow-hidden border-b print:hidden">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 container mx-auto grid grid-cols-6 px-4 sm:px-6 md:grid-cols-12 lg:px-8"
+        >
+          {Array.from({ length: 12 }).map((_, i) => (
+            <span
+              key={i}
+              className={`border-traco border-l border-dashed last:border-r ${i >= 6 ? "hidden md:block" : ""}`}
+            />
+          ))}
         </div>
-      </div>
+        <div className="relative container mx-auto px-4 py-14 sm:px-6 md:py-16 lg:px-8">
+          <span className="rotulo">Tropical on Rails 26</span>
+          <h1 className="chamada mt-2 mb-6 text-5xl md:text-7xl lg:text-[88px]">
+            Call for
+            <br />
+            proposals
+          </h1>
+          <p className="text-texto-apoio mb-10 max-w-2xl">
+            <a
+              href="https://tropicalonrails.com"
+              target="_blank"
+              className="text-marca-azul underline"
+              rel="noreferrer"
+            >
+              Tropical on Rails
+            </a>{" "}
+            returns for its 5th edition, welcoming 700 Rails enthusiasts for two
+            days of learning, energy, and celebration. Your talk could inspire
+            hundreds of developers building products across Latin America and
+            beyond.
+          </p>
+          <dl className="flex flex-wrap gap-x-12 gap-y-6">
+            <div>
+              <dt className="rotulo mb-2">When</dt>
+              <dd className="text-2xl font-semibold tracking-[-0.01em]">
+                April 9-10, 2026
+              </dd>
+            </div>
+            <div>
+              <dt className="rotulo mb-2">Where</dt>
+              <dd className="text-2xl font-semibold tracking-[-0.01em]">
+                São Paulo, Brazil
+              </dd>
+            </div>
+            <div>
+              <dt className="rotulo mb-2">Attendees</dt>
+              <dd className="text-2xl font-semibold tracking-[-0.01em]">
+                700+
+              </dd>
+            </div>
+          </dl>
+        </div>
+        <div
+          aria-hidden="true"
+          className="absolute right-4 bottom-0 hidden gap-12 sm:right-6 sm:flex lg:right-8"
+        >
+          <i className="bg-marca-azul block size-14" />
+          <i className="bg-marca-verde block size-14" />
+        </div>
+      </section>
 
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
         <div className="animate-slide-up space-y-8">
           <div>
-            <h2 className="text-secondary-800 mb-4 text-2xl font-bold">
-              Quick Summary
-            </h2>
+            <h2 className="section-title mb-4">Quick Summary</h2>
             <div className="space-y-6">
               <ul className="list-disc space-y-2 pl-6">
                 <li>Deadline: January 14, 2026</li>
@@ -75,9 +97,7 @@ export default function Index({ oauth_providers }: IndexProps) {
           </div>
 
           <div>
-            <h2 className="text-secondary-800 mb-4 text-2xl font-bold">
-              What we are looking for:
-            </h2>
+            <h2 className="section-title mb-4">What we are looking for:</h2>
             <div className="space-y-6">
               <ul className="list-disc space-y-2 pl-6">
                 <li>
@@ -126,9 +146,7 @@ export default function Index({ oauth_providers }: IndexProps) {
           </div>
 
           <div>
-            <h2 className="text-secondary-800 mb-4 text-2xl font-bold">
-              What we are NOT looking for:
-            </h2>
+            <h2 className="section-title mb-4">What we are NOT looking for:</h2>
             <div className="space-y-6">
               <ul className="list-disc space-y-2 pl-6">
                 <li>Rails API</li>
@@ -141,9 +159,7 @@ export default function Index({ oauth_providers }: IndexProps) {
           </div>
 
           <div>
-            <h2 className="text-secondary-800 mb-4 text-2xl font-bold">
-              Speaker benefits:
-            </h2>
+            <h2 className="section-title mb-4">Speaker benefits:</h2>
             <div className="space-y-6">
               <ul className="list-disc space-y-2 pl-6">
                 <li>Invitation to our exclusive speaker’s dinner!</li>
@@ -164,9 +180,7 @@ export default function Index({ oauth_providers }: IndexProps) {
           </div>
 
           <div>
-            <h2 className="text-secondary-800 mb-4 text-2xl font-bold">
-              Talk Information:
-            </h2>
+            <h2 className="section-title mb-4">Talk Information:</h2>
             <div className="space-y-6">
               <ul className="list-disc space-y-2 pl-6">
                 <li>30-minute talks</li>
@@ -180,9 +194,7 @@ export default function Index({ oauth_providers }: IndexProps) {
           </div>
 
           <div>
-            <h2 className="text-secondary-800 mb-4 text-2xl font-bold">
-              Selection Process
-            </h2>
+            <h2 className="section-title mb-4">Selection Process</h2>
             <div className="space-y-4">
               <p>
                 A committee will review all proposals and select talks based on
@@ -218,9 +230,7 @@ export default function Index({ oauth_providers }: IndexProps) {
           </div>
 
           <div>
-            <h2 className="text-secondary-800 mb-4 text-2xl font-bold">
-              Tips for a Great Proposal
-            </h2>
+            <h2 className="section-title mb-4">Tips for a Great Proposal</h2>
             <div className="space-y-4">
               <p>
                 Last year, we received around 100 talk submissions, making it
@@ -269,23 +279,23 @@ export default function Index({ oauth_providers }: IndexProps) {
         <div className="space-y-8 lg:pl-8">
           <div
             data-test-id="home-actions"
-            className="card border-secondary-800 animate-slide-up border"
+            className="card animate-slide-up"
             style={{ animationDelay: "0.1s" }}
           >
             {cfp_closed && (
               <>
                 {cfp_future && (
-                  <h3 className="text-center text-lg font-bold">
+                  <h3 className="text-texto text-center text-lg font-semibold">
                     The call for proposals is not open yet
                   </h3>
                 )}
                 {!cfp_future && (
-                  <h3 className="mb-6 text-xl font-bold">
+                  <h3 className="text-texto mb-4 text-lg font-semibold">
                     The call for proposals is now closed
                   </h3>
                 )}
                 {!cfp_future && (
-                  <p className="mb-8 text-neutral-600">
+                  <p className="text-texto-apoio mb-8">
                     Than you everyone for your submissions! You will hear from
                     us shortly!
                   </p>
@@ -294,10 +304,10 @@ export default function Index({ oauth_providers }: IndexProps) {
             )}
             {!cfp_closed && (
               <>
-                <h3 className="mb-6 text-xl font-bold">
+                <h3 className="text-texto mb-4 text-lg font-semibold">
                   Ready to share your expertise?
                 </h3>
-                <p className="mb-8 text-neutral-600">
+                <p className="text-texto-apoio mb-8">
                   We welcome proposals from speakers of every background and
                   stage in their career. If you have a valuable insight, story,
                   or lesson to share, this is your space.
@@ -332,18 +342,20 @@ export default function Index({ oauth_providers }: IndexProps) {
           </div>
 
           <div
-            className="card border-secondary-800 animate-slide-up border"
+            className="card animate-slide-up"
             style={{ animationDelay: "0.2s" }}
           >
-            <h3 className="mb-4 text-xl font-bold">Have questions?</h3>
-            <p className="mb-6">
+            <h3 className="text-texto mb-4 text-lg font-semibold">
+              Have questions?
+            </h3>
+            <p className="text-texto-apoio mb-6">
               If you have any questions about the CFP process or need help with
               your proposal, feel free to reach out to our team.
             </p>
             {/* FIXME: Replace with your contact email */}
             <a
               href="mailto:info@tropicalonrails.com"
-              className="text-primary-600 hover:text-primary-800 inline-flex items-center font-medium transition-colors"
+              className="text-tinta-500 hover:text-tinta-800 inline-flex items-center font-semibold underline underline-offset-4 transition-colors"
             >
               Contact the CFP team
               <span className="ml-1">→</span>

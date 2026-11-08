@@ -3,5 +3,5 @@ class ReviewPage < BasePage
 
   section :form, Sections::Form
 
-  load_validation { has_text?("Proposal Information") }
+  load_validation { has_text?(/Proposal Information/i) }
 end

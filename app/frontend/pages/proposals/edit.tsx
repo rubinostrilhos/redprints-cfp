@@ -24,7 +24,7 @@ export default function Edit({ proposal, speaker, cfp }: EditProps) {
       <div className="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <Link
           href={`/proposals/${proposal.id}`}
-          className="text-cloud-600 hover:text-cloud-700 mb-6 flex items-center transition-colors"
+          className="rotulo hover:text-texto mb-6 flex items-center transition-colors"
         >
           <ArrowLeftIcon className="mr-1 h-4 w-4" />
           Back to the proposal
@@ -32,10 +32,10 @@ export default function Edit({ proposal, speaker, cfp }: EditProps) {
 
         <div className="mx-auto max-w-4xl">
           <div className="animate-fade-in mb-8">
-            <h1 className="mb-2 text-3xl font-bold">
+            <h1 className="page-title mb-3">
               {fieldName("header", "Edit Your Proposal")}
             </h1>
-            <p className="text-cloud-600">
+            <p className="text-texto-apoio">
               {fieldName(
                 "description",
                 "Update your proposal details. All fields marked with * are required.",

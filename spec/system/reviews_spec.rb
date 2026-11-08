@@ -30,10 +30,10 @@ describe "Reviews" do
     expect(reviews_page).to be_displayed(evaluation_id: evaluation.id)
 
     expect(reviews_page.pending_reviews).to have_rows(count: 2)
-    expect(reviews_page.pending_reviews.first_row).to have_text "The Future of Ruby"
-    expect(reviews_page.pending_reviews.first_row).to have_text "Pending"
-    expect(reviews_page.pending_reviews.second_row).to have_text "Rails Performance Tips"
-    expect(reviews_page.pending_reviews.second_row).to have_text "Pending"
+    expect(reviews_page.pending_reviews.first_row).to have_text(/The Future of Ruby/i)
+    expect(reviews_page.pending_reviews.first_row).to have_text(/Pending/i)
+    expect(reviews_page.pending_reviews.second_row).to have_text(/Rails Performance Tips/i)
+    expect(reviews_page.pending_reviews.second_row).to have_text(/Pending/i)
 
     expect(page).not_to have_link("Results")
 
@@ -41,7 +41,7 @@ describe "Reviews" do
 
     expect(review_page).to be_displayed(id: review1.id)
 
-    expect(page).to have_text "The Future of Ruby"
+    expect(page).to have_text(/The Future of Ruby/i)
 
     review_page.form.within do |f|
       f.select_star("Novelty", 3)
@@ -52,13 +52,13 @@ describe "Reviews" do
       f.click_on "Submit Review"
     end
 
-    expect(page).to have_text "Proposals Evaluation"
+    expect(page).to have_text(/Proposals Evaluation/i)
 
     expect(reviews_page).to be_displayed(evaluation_id: evaluation.id)
 
     expect(reviews_page.pending_reviews).to have_rows(count: 1)
     expect(reviews_page.completed_reviews).to have_rows(count: 1)
-    expect(reviews_page.completed_reviews.first_row).to have_text "The Future of Ruby"
+    expect(reviews_page.completed_reviews.first_row).to have_text(/The Future of Ruby/i)
   end
 
   context "Results" do
@@ -96,16 +96,16 @@ describe "Reviews" do
         click_on "Submit Review Results"
       end
 
-      expect(page).to have_text "Successfully updated proposal statuses"
+      expect(page).to have_text(/Successfully updated proposal statuses/i)
 
       expect(results_page).to be_displayed(evaluation_id: evaluation.id)
 
       expect(results_page.accepted_proposals).to have_rows(count: 1)
       expect(results_page.rejected_proposals).to have_rows(count: 1)
 
-      expect(results_page.accepted_proposals.first_row).to have_text "Accepted"
+      expect(results_page.accepted_proposals.first_row).to have_text(/Accepted/i)
       expect(results_page.accepted_proposals.first_row).not_to have_button "Accept"
-      expect(results_page.rejected_proposals.first_row).to have_text "Not Accepted"
+      expect(results_page.rejected_proposals.first_row).to have_text(/Not Accepted/i)
       expect(results_page.rejected_proposals.first_row).not_to have_button "Accept"
     end
   end

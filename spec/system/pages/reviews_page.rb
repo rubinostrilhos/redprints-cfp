@@ -4,5 +4,5 @@ class ReviewsPage < BasePage
   section :pending_reviews, Sections::Table, "[data-test-id='pending'] table"
   section :completed_reviews, Sections::Table, "[data-test-id='completed'] table"
 
-  load_validation { has_text?("Review conference talk proposals") }
+  load_validation { has_text?(/Review conference talk proposals/i) }
 end

@@ -7,7 +7,7 @@ export function formatDeadline(deadline: string | null): {
     return {
       text: "No deadline",
       isPast: false,
-      className: "text-gray-500",
+      className: "text-texto-apoio",
     };
   }
 
@@ -46,13 +46,13 @@ export function formatDeadline(deadline: string | null): {
     return {
       text: `Closed ${timeText} ago (${formattedDate})`,
       isPast: true,
-      className: "text-red-600",
+      className: "text-error-600",
     };
   } else {
     return {
       text: `Closes in ${timeText} (${formattedDate})`,
       isPast: false,
-      className: "text-green-600",
+      className: "text-marca-verde",
     };
   }
 }

@@ -17,47 +17,47 @@ export default function Index({ evaluations }: IndexProps) {
         <div className="mx-auto max-w-4xl">
           <div className="animate-fade-in mb-8 flex flex-col items-start justify-between sm:flex-row sm:items-center">
             <div>
-              <h1 className="mb-2 text-3xl font-bold">My Evaluations</h1>
+              <h1 className="page-title mb-3">My Evaluations</h1>
             </div>
           </div>
 
           {evaluations.length === 0 ? (
-            <div className="card border-secondary-700 animate-slide-up border py-16 text-center">
-              <h3 className="text-cloud-800 mb-4 text-xl font-medium">
+            <div className="card animate-slide-up py-16 text-center">
+              <h3 className="text-texto mb-4 text-lg font-semibold">
                 You don’t have any proposal evaluations assigned yet
               </h3>
             </div>
           ) : (
-            <div className="card border-secondary-800 animate-slide-up overflow-hidden border">
+            <div className="card animate-slide-up overflow-hidden !p-0">
               <div className="overflow-x-auto">
-                <table className="divide-secondary-800 min-w-full divide-y">
+                <table className="divide-traco min-w-full divide-y">
                   <thead>
                     <tr>
                       <th
                         scope="col"
-                        className="text-cloud-800 p-2 text-left text-xs font-medium tracking-wider uppercase sm:px-6 sm:py-3"
+                        className="rotulo border-tinta-500 border-b p-2 text-left sm:px-6 sm:py-3"
                       >
                         Evaluation
                       </th>
                       <th
                         scope="col"
-                        className="text-cloud-800 p-2 text-left text-xs font-medium tracking-wider uppercase sm:px-6 sm:py-3"
+                        className="rotulo border-tinta-500 border-b p-2 text-left sm:px-6 sm:py-3"
                       >
                         Tracks
                       </th>
                       <th
                         scope="col"
-                        className="text-cloud-800 p-2 text-left text-xs font-medium tracking-wider uppercase sm:px-6 sm:py-3"
+                        className="rotulo border-tinta-500 border-b p-2 text-left sm:px-6 sm:py-3"
                       >
                         Deadline
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="divide-secondary-800 divide-y bg-white">
+                  <tbody className="divide-traco divide-y">
                     {evaluations.map((evaluation) => (
                       <tr
                         key={evaluation.id}
-                        className="hover:bg-secondary-50 cursor-pointer transition-colors"
+                        className="hover:bg-tinta-500/5 cursor-pointer transition-colors"
                         onClick={() =>
                           router.get(`/evaluations/${evaluation.id}/reviews`)
                         }
@@ -77,10 +77,10 @@ export default function Index({ evaluations }: IndexProps) {
                         <td className="p-2 whitespace-nowrap sm:px-6 sm:py-4">
                           {evaluation.deadline ? (
                             <span
-                              className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${
+                              className={`badge ${
                                 formatDeadline(evaluation.deadline).isPast
-                                  ? "bg-red-100 text-red-800"
-                                  : "bg-green-100 text-green-800"
+                                  ? "badge-rejected"
+                                  : "badge-accepted"
                               }`}
                             >
                               {formatDeadline(evaluation.deadline).isPast
@@ -89,7 +89,7 @@ export default function Index({ evaluations }: IndexProps) {
                               {formatDeadline(evaluation.deadline).text}
                             </span>
                           ) : (
-                            <span className="text-sm text-gray-500">
+                            <span className="text-texto-apoio text-sm">
                               No deadline
                             </span>
                           )}

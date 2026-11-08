@@ -14,14 +14,14 @@ export default function Layout({ currentUser, children }: LayoutProps) {
   const { flash } = usePage().props;
 
   return (
-    <div className="font-display relative flex min-h-screen flex-col overflow-hidden bg-white text-gray-900 transition-colors duration-300">
+    <div className="bg-fundo text-tinta-800 relative flex min-h-screen flex-col overflow-hidden font-mono">
       <Header currentUser={currentUser} />
 
       <main className="flex-grow">
         <div className="container mx-auto px-4 py-8 sm:px-6 lg:px-8 print:w-full print:!px-2">
           {flash.alert && (
             <div
-              className="relative mb-2 rounded-md border border-red-400 bg-red-100 px-4 py-3 text-red-700"
+              className="border-error-600 text-error-600 relative mb-4 border border-l-[6px] bg-white px-4 py-3"
               role="alert"
             >
               <span className="block sm:inline">{flash.alert}</span>
@@ -29,7 +29,7 @@ export default function Layout({ currentUser, children }: LayoutProps) {
           )}
           {flash.notice && (
             <div
-              className="relative mb-2 rounded-md border border-green-400 bg-green-100 px-4 py-3 text-green-700"
+              className="border-marca-verde text-tinta-500 relative mb-4 border border-l-[6px] px-4 py-3"
               role="alert"
             >
               <span className="block sm:inline">{flash.notice}</span>

@@ -3,5 +3,5 @@ class ProposalFormPage < BasePage
 
   section :form, Sections::Form
 
-  load_validation { has_text?("Submit Your Proposal") }
+  load_validation { has_text?(/Submit Your Proposal/i) }
 end

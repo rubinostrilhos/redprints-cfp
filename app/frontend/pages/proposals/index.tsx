@@ -34,7 +34,7 @@ export default function Index({ proposals }: IndexProps) {
       <div className="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="text-cloud-600 hover:text-cloud-700 mb-6 flex items-center transition-colors"
+          className="rotulo hover:text-texto mb-6 flex items-center transition-colors"
         >
           <ArrowLeftIcon className="mr-1 h-4 w-4" />
           Back home
@@ -43,21 +43,21 @@ export default function Index({ proposals }: IndexProps) {
         <div className="mx-auto max-w-4xl">
           <div className="animate-fade-in mb-8 flex flex-col items-start justify-between sm:flex-row sm:items-center">
             <div>
-              <h1 className="mb-2 text-3xl font-bold">My Proposals</h1>
-              <p className="text-cloud-700">
+              <h1 className="page-title mb-3">My Proposals</h1>
+              <p className="text-tinta-800">
                 Track and manage your conference talk proposals
               </p>
             </div>
           </div>
 
           {proposals.length === 0 ? (
-            <div className="card border-secondary-700 animate-slide-up border py-16 text-center">
-              <h3 className="text-cloud-800 mb-4 text-xl font-medium">
+            <div className="card animate-slide-up py-16 text-center">
+              <h3 className="text-texto mb-4 text-lg font-semibold">
                 You haven’t submitted any proposals yet
               </h3>
               {!cfp_closed && (
                 <>
-                  <p className="text-cloud-700 mx-auto mb-8 max-w-md">
+                  <p className="text-tinta-800 mx-auto mb-8 max-w-md">
                     Share your knowledge with the Ruby community by submitting a
                     proposal for Tropical on Rails.
                   </p>
@@ -72,53 +72,51 @@ export default function Index({ proposals }: IndexProps) {
               )}
             </div>
           ) : (
-            <div className="card border-secondary-800 animate-slide-up overflow-hidden border">
+            <div className="card animate-slide-up overflow-hidden !p-0">
               <div className="overflow-x-auto">
-                <table className="divide-secondary-800 min-w-full divide-y">
+                <table className="divide-traco min-w-full divide-y">
                   <thead>
                     <tr>
                       <th
                         scope="col"
-                        className="text-cloud-800 w-2/3 p-2 text-left text-xs font-medium tracking-wider uppercase sm:px-6 sm:py-3"
+                        className="rotulo border-tinta-500 w-2/3 border-b p-2 text-left sm:px-6 sm:py-3"
                       >
                         Title
                       </th>
                       <th
                         scope="col"
-                        className="text-cloud-800 p-2 text-left text-xs font-medium tracking-wider uppercase sm:px-6 sm:py-3"
+                        className="rotulo border-tinta-500 border-b p-2 text-left sm:px-6 sm:py-3"
                       >
                         Track
                       </th>
                       <th
                         scope="col"
-                        className="text-cloud-800 p-2 text-left text-xs font-medium tracking-wider uppercase sm:px-6 sm:py-3"
+                        className="rotulo border-tinta-500 border-b p-2 text-left sm:px-6 sm:py-3"
                       >
                         Submitted On
                       </th>
                       <th
                         scope="col"
-                        className="text-cloud-800 p-2 text-left text-xs font-medium tracking-wider uppercase sm:px-6 sm:py-3"
+                        className="rotulo border-tinta-500 border-b p-2 text-left sm:px-6 sm:py-3"
                       >
                         Status
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="divide-secondary-800 divide-y bg-white">
+                  <tbody className="divide-traco divide-y">
                     {proposals.map((proposal) => (
                       <tr
                         key={proposal.id}
-                        className="hover:bg-secondary-50 cursor-pointer transition-colors"
+                        className="hover:bg-tinta-500/5 cursor-pointer transition-colors"
                         onClick={() => router.get(`/proposals/${proposal.id}`)}
                       >
                         <td className="p-2 sm:px-6 sm:py-4">
-                          <div className="text-sm font-medium break-words">
+                          <div className="text-texto text-sm font-semibold break-words">
                             {proposal.title}
                           </div>
                         </td>
                         <td className="p-2 whitespace-nowrap sm:px-6 sm:py-4">
-                          <div className="text-secondary-800 text-sm">
-                            {proposal.track}
-                          </div>
+                          <div className="text-sm">{proposal.track}</div>
                         </td>
                         <td className="p-2 whitespace-nowrap sm:px-6 sm:py-4">
                           <div className="text-sm">

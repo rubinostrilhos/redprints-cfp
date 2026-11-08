@@ -43,51 +43,51 @@ export default function Index({ reviews, evaluation }: IndexProps) {
 
     return (
       <div className="not-first:mt-8" data-test-id={test_id}>
-        <h2 className="mb-4 text-xl font-bold">
+        <h2 className="section-title mb-4">
           {title} ({reviews.length})
         </h2>
-        <div className="card border-secondary-800 animate-slide-up overflow-hidden border">
+        <div className="card animate-slide-up overflow-hidden !p-0">
           <div className="overflow-x-auto">
-            <table className="divide-secondary-800 min-w-full divide-y">
+            <table className="divide-traco min-w-full divide-y">
               <thead>
                 <tr>
                   <th
                     scope="col"
-                    className="text-cloud-800 w-2/3 p-2 text-left text-xs font-medium tracking-wider uppercase sm:px-6 sm:py-3"
+                    className="rotulo border-tinta-500 w-2/3 border-b p-2 text-left sm:px-6 sm:py-3"
                   >
                     Title
                   </th>
                   <th
                     scope="col"
-                    className="text-cloud-800 p-2 text-left text-xs font-medium tracking-wider uppercase sm:px-6 sm:py-3"
+                    className="rotulo border-tinta-500 border-b p-2 text-left sm:px-6 sm:py-3"
                   >
                     Track
                   </th>
                   {!evaluation.blind && (
                     <th
                       scope="col"
-                      className="text-cloud-800 p-2 text-left text-xs font-medium tracking-wider uppercase sm:px-6 sm:py-3"
+                      className="rotulo border-tinta-500 border-b p-2 text-left sm:px-6 sm:py-3"
                     >
                       Speaker
                     </th>
                   )}
                   <th
                     scope="col"
-                    className="text-cloud-800 p-2 text-left text-xs font-medium tracking-wider uppercase sm:px-6 sm:py-3"
+                    className="rotulo border-tinta-500 border-b p-2 text-left sm:px-6 sm:py-3"
                   >
                     Review Status
                   </th>
                   <th
                     scope="col"
-                    className="text-cloud-800 p-2 text-center text-xs font-medium tracking-wider uppercase sm:px-6 sm:py-3"
+                    className="rotulo border-tinta-500 border-b p-2 text-center sm:px-6 sm:py-3"
                   ></th>
                 </tr>
               </thead>
-              <tbody className="divide-secondary-800 divide-y bg-white">
+              <tbody className="divide-traco divide-y">
                 {reviews.map((review) => (
                   <tr
                     key={review.id}
-                    className="hover:bg-secondary-50 cursor-pointer transition-colors"
+                    className="hover:bg-tinta-500/5 cursor-pointer transition-colors"
                     onClick={(e) => {
                       // Prevent navigation if clicking on the external link button
                       if (
@@ -104,13 +104,13 @@ export default function Index({ reviews, evaluation }: IndexProps) {
                       </div>
                     </td>
                     <td className="p-2 whitespace-nowrap sm:px-6 sm:py-4">
-                      <div className="text-secondary-800 text-sm">
+                      <div className="text-texto text-sm">
                         {review.proposal!.track}
                       </div>
                     </td>
                     {!evaluation.blind && (
                       <td className="p-2 whitespace-nowrap sm:px-6 sm:py-4">
-                        <div className="text-secondary-800 text-sm">
+                        <div className="text-texto text-sm">
                           {review.speaker.name}
                         </div>
                       </td>
@@ -132,7 +132,7 @@ export default function Index({ reviews, evaluation }: IndexProps) {
                     </td>
                     <td className="p-2 text-center whitespace-nowrap sm:px-6 sm:py-4">
                       <button
-                        className="external-link-btn text-secondary-600 hover:text-secondary-800 inline-flex cursor-pointer items-center justify-center rounded-md p-2 transition-colors hover:bg-white"
+                        className="external-link-btn text-tinta-500 hover:text-tinta-800 hover:bg-tinta-500/5 inline-flex cursor-pointer items-center justify-center p-2 transition-colors"
                         onClick={() =>
                           window.open(`/reviews/${review.id}`, "_blank")
                         }
@@ -157,14 +157,14 @@ export default function Index({ reviews, evaluation }: IndexProps) {
         <div className="mx-auto max-w-4xl">
           {/* Show warning banner when submissions are not allowed */}
           {!evaluation.submissions_allowed && (
-            <div className="animate-slide-up mb-6 rounded-lg border border-red-200 bg-red-50 p-4">
+            <div className="animate-slide-up border-error-600 mb-6 border border-l-[6px] bg-white p-4">
               <div className="flex items-center">
-                <AlertCircleIcon className="mr-2 h-5 w-5 flex-shrink-0 text-red-600" />
+                <AlertCircleIcon className="text-error-600 mr-2 h-5 w-5 flex-shrink-0" />
                 <div>
-                  <p className="font-medium text-red-800">
+                  <p className="text-error-600 font-semibold">
                     The evaluation deadline has passed
                   </p>
-                  <p className="mt-1 text-sm text-red-700">
+                  <p className="text-error-600 mt-1 text-sm">
                     You can view your submitted reviews, but you cannot submit
                     new reviews or edit existing ones.
                   </p>
@@ -174,8 +174,8 @@ export default function Index({ reviews, evaluation }: IndexProps) {
           )}
           <div className="animate-fade-in mb-8 flex flex-col items-start justify-between sm:flex-row sm:items-center">
             <div>
-              <h1 className="mb-2 text-3xl font-bold">Proposals Evaluation</h1>
-              <p className="text-cloud-700">Review conference talk proposals</p>
+              <h1 className="page-title mb-3">Proposals Evaluation</h1>
+              <p className="text-tinta-800">Review conference talk proposals</p>
               {evaluation.deadline && (
                 <p
                   className={`mt-2 text-sm font-medium ${formatDeadline(evaluation.deadline).className}`}
@@ -195,8 +195,8 @@ export default function Index({ reviews, evaluation }: IndexProps) {
           </div>
 
           {reviews.length === 0 ? (
-            <div className="card border-secondary-700 animate-slide-up border py-16 text-center">
-              <h3 className="text-cloud-800 mb-4 text-xl font-medium">
+            <div className="card animate-slide-up py-16 text-center">
+              <h3 className="text-texto mb-4 text-lg font-semibold">
                 You don’t have any proposals pending review yet
               </h3>
             </div>
