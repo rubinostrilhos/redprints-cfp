@@ -14,7 +14,7 @@ void createInertiaApp({
   //
   // FIXME: Replace with your application's title
   title: (title) =>
-    title ? `${title}, Tropical on Rails 2026` : "Tropical on Rails 2026",
+    title ? `${title}, Tropical on Rails 2027` : "Tropical on Rails 2027",
 
   // Disable progress bar
   //
