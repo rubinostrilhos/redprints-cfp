@@ -1,0 +1,35 @@
+spec/models/cfp_data_spec.rb
+  s_7132583a31ff7f::t_b33e06635b5972 25-52,55-57
+  s_7132583a31ff7f::t_d69cc6e0dfcb45 53-54
+app/frontend/entrypoints/inertia.ts
+  s_7132583a31ff7f::t_15abe5ed80aacb 17
+app/views/layouts/core.html.erb
+  s_7132583a31ff7f::t_15abe5ed80aacb 14-15,20
+app/views/layouts/mailer.html.erb
+  s_7132583a31ff7f::t_15abe5ed80aacb 70
+config/data/cfps.yml
+  s_7132583a31ff7f::t_aba1510c8989e8 1,6-10
+  s_7132583a31ff7f::t_9da91dc8397c2d 11-13
+app/frontend/pages/home/index.tsx
+  s_7132583a31ff7f::t_15abe5ed80aacb 26,37,45,66,71,213
+app/mailers/application_mailer.rb
+  s_7132583a31ff7f::t_15abe5ed80aacb 24
+app/views/mailers/proposal_mailer/proposal_accepted.html.erb
+  s_7132583a31ff7f::t_15abe5ed80aacb 7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "283bf92b6520fb07ea9da2626f77333eff88ef58",
+  "prompts": {},
+  "sessions": {
+    "s_7132583a31ff7f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7e382b47-d35c-4843-bb9e-8326ae8747d9",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Cirdes <cirdes@linkana.com>"
+    }
+  }
+}
