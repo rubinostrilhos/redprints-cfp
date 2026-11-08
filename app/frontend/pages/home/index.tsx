@@ -1,6 +1,7 @@
 import { Link, usePage } from "@inertiajs/react";
 import { FileTextIcon } from "lucide-react";
 
+import { CfpThemes } from "@/components/CfpThemes";
 import Layout from "@/components/Layout";
 import { OAuthButtons } from "@/components/OAuthButtons";
 
@@ -79,6 +80,8 @@ export default function Index({ oauth_providers }: IndexProps) {
         </div>
       </section>
 
+      <CfpThemes />
+
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
         <div className="animate-slide-up space-y-8">
           <div>
@@ -92,55 +95,6 @@ export default function Index({ oauth_providers }: IndexProps) {
                 <li>Ruby on Rails focus</li>
                 <li>March 18 & 19, 2027</li>
                 <li>São Paulo - Brazil</li>
-              </ul>
-            </div>
-          </div>
-
-          <div>
-            <h2 className="section-title mb-4">What we are looking for:</h2>
-            <div className="space-y-6">
-              <ul className="list-disc space-y-2 pl-6">
-                <li>
-                  <b>Rails 8:</b> Exploring the new features introduced in Rails
-                  8.0 and 8.1, and how they can be applied in real-world
-                  applications.
-                </li>
-                <li>
-                  <b>Ruby/Rails and AI/ML:</b> How AI is being integrated into
-                  Rails applications — from code generation to AI-powered
-                  features, testing, tooling, gems, and architecture
-                </li>
-                <li>
-                  <b>Developer Experience:</b> Tools to improve the experience
-                  for developers, such as LSPs, MCPs, generators, debuggers,
-                  etc.
-                </li>
-                <li>
-                  <b>Rails for Startups:</b> How small startups leverage Rails
-                  to iterate quickly, validate ideas, and disrupt industries.
-                </li>
-                <li>
-                  <b>Frontend on Rails:</b> Using Rails as an alternative to
-                  traditional SPA frameworks, including Hotwire, Turbo,
-                  Stimulus, and other emerging approaches.
-                </li>
-                <li>
-                  <b>Advanced Database and Performance at Scale:</b> Techniques
-                  for optimizing large Rails apps — UUID V7, multi-database,
-                  scaling strategies, background jobs, database best practices,
-                  and more.
-                </li>
-                <li>
-                  <b>Security on Rails:</b> Best practices for authentication,
-                  data protection, ActiveRecord encryption, database
-                  obfuscation, privacy compliance, and meeting standards such as
-                  ISO, SOC, GDPR, and LGPD.
-                </li>
-                <li>
-                  <b>The Power of the Monolith:</b> Revisiting monolithic
-                  architectures and sharing lessons from teams migrating away
-                  from microservices back to Rails monoliths.
-                </li>
               </ul>
             </div>
           </div>
@@ -260,9 +214,9 @@ export default function Index({ oauth_providers }: IndexProps) {
                 </li>
                 <li>
                   <b>What We Are Looking For:</b> We’re particularly excited
-                  about submissions that align with our ‘What We Are Looking
-                  For’ themes. That said, if you have a compelling idea that
-                  falls outside these areas, we’d love to hear it! While we have
+                  about submissions that align with the themes at the top of
+                  this page. That said, if you have a compelling idea that falls
+                  outside these areas, we’d love to hear it! While we have
                   certain focus areas in mind, we’re always open to fresh
                   perspectives that could enrich our conference.
                 </li>
