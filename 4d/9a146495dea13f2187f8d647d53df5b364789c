@@ -1,0 +1,30 @@
+spec/forms/auth/oauth_form_spec.rb
+  s_94d98aa43e3bce::t_cfb2fbb3619e9c 28-35,38,41-52
+  s_94d98aa43e3bce::t_86a7a772df2ad8 36-37,39-40
+config/credentials/production.yml.enc
+  s_a9887aba9b5587::t_3a1d29169b650d 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "4d9a146495dea13f2187f8d647d53df5b364789c",
+  "prompts": {},
+  "sessions": {
+    "s_94d98aa43e3bce": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f9c03261-2513-4d20-bc8e-1a6768ca234d",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Cirdes <cirdes@linkana.com>"
+    },
+    "s_a9887aba9b5587": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "13c03daf-23e1-4381-9851-b820f343f01a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Cirdes <cirdes@linkana.com>"
+    }
+  }
+}
