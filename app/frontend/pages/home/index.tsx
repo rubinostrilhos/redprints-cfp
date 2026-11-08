@@ -17,8 +17,8 @@ const SUMMARY = [
   { label: "Focus", value: "Ruby on Rails" },
   {
     label: "Language",
-    value: "English or Portuguese",
-    note: "Live translation is provided. Pick the one you present best in.",
+    value: "English, Portuguese, or Spanish",
+    note: "We recommend presenting in your native language. Live translation is provided.",
   },
   { label: "Decisions", value: "First week of January" },
 ];
@@ -286,7 +286,7 @@ export default function Index({ oauth_providers }: IndexProps) {
             />
             <span className="rotulo mt-1 mb-4 block">Included</span>
             <ul className="list-disc space-y-2 pl-5">
-              <li>An invitation to our exclusive speakers' dinner</li>
+              <li>An invitation to our exclusive speakers’ dinner</li>
               <li>
                 Free admission to the conference. If you already bought a ticket
                 and get accepted, you can ask for a refund.
@@ -300,7 +300,7 @@ export default function Index({ oauth_providers }: IndexProps) {
             />
             <span className="rotulo mt-1 mb-4 block">Not included</span>
             <p>
-              We don't have the budget to cover travel, such as airfare and
+              We don’t have the budget to cover travel, such as airfare and
               hotels. If your company sponsors your trip, we will feature its
               logo on our website as a Speaker Supporter.
             </p>
