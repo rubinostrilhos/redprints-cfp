@@ -14,8 +14,8 @@ describe "Startups" do
 
     expect(proposal_form_page).to be_displayed
 
-    expect(page).to have_text "Startup Name"
-    expect(page).to have_text "How does Ruby power your product?"
+    expect(page).to have_text(/Startup Name/i)
+    expect(page).to have_text(/How does Ruby power your product\?/i)
   end
 
   context "when the default CFP deadline has passed" do
@@ -46,8 +46,8 @@ describe "Startups" do
       expect(proposals_page).to be_displayed
 
       expect(proposals_page.proposals).to have_rows(count: 1)
-      expect(proposals_page.proposals.first_row).to have_text "Meow Coder"
-      expect(proposals_page.proposals.first_row).to have_text "Submitted"
+      expect(proposals_page.proposals.first_row).to have_text(/Meow Coder/i)
+      expect(proposals_page.proposals.first_row).to have_text(/Submitted/i)
     end
   end
 end

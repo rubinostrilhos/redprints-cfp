@@ -50,7 +50,7 @@ export default function Show({ proposal, speaker, cfp }: ShowProps) {
       <div className="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <Link
           href="/proposals"
-          className="text-cloud-600 hover:text-cloud-700 mb-6 flex items-center transition-colors"
+          className="rotulo hover:text-texto mb-6 flex items-center transition-colors"
         >
           <ArrowLeftIcon className="mr-1 h-4 w-4" />
           Back to My proposals
@@ -60,9 +60,7 @@ export default function Show({ proposal, speaker, cfp }: ShowProps) {
           <div className="animate-fade-in mb-8 flex flex-col items-start justify-between sm:flex-row sm:items-center">
             <div>
               <div className="flex items-center">
-                <h1 className="mr-3 mb-2 text-3xl font-bold">
-                  {proposal.title}
-                </h1>
+                <h1 className="page-title mr-3 mb-3">{proposal.title}</h1>
               </div>
               <div className="flex items-center space-x-2">
                 <StatusBadge status={proposal.status} />
@@ -90,7 +88,7 @@ export default function Show({ proposal, speaker, cfp }: ShowProps) {
               )}
               <button
                 onClick={handleRetractProposal}
-                className="btn btn-outline mt-4 flex cursor-pointer items-center border-red-300 text-nowrap text-red-700 hover:bg-red-50 focus:ring-red-500 sm:mt-0"
+                className="btn btn-outline border-error-600 text-error-600 hover:bg-error-600/5 mt-4 flex cursor-pointer items-center text-nowrap sm:mt-0"
               >
                 <TrashIcon className="mr-2 h-5 w-5" />
                 Retract Proposal
@@ -100,44 +98,42 @@ export default function Show({ proposal, speaker, cfp }: ShowProps) {
 
           {/* Talk Information */}
           <div className="card animate-slide-up mb-8 border">
-            <h2 className="border-secondary-700 mb-6 border-b pb-4 text-xl font-bold">
+            <h2 className="section-title border-traco mb-6 border-b pb-4">
               {fieldName("talk_header", "Talk Information")}
             </h2>
 
             <div className="space-y-6">
               {hasTracks && (
                 <div>
-                  <h3 className="border-secondary-700 text-secondary-800 mb-2 text-sm font-medium uppercase">
-                    Track
-                  </h3>
-                  <p className="text-cloud-700">{proposal.track}</p>
+                  <h3 className="rotulo mb-2">Track</h3>
+                  <p className="text-tinta-800">{proposal.track}</p>
                 </div>
               )}
 
               <div>
-                <h3 className="border-secondary-700 text-secondary-800 mb-2 text-sm font-medium uppercase">
+                <h3 className="rotulo mb-2">
                   {" "}
                   {fieldName("abstract", "Abstract")}
                 </h3>
-                <p className="text-cloud-700 whitespace-pre-line">
+                <p className="text-tinta-800 whitespace-pre-line">
                   {proposal.abstract}
                 </p>
               </div>
 
               <div>
-                <h3 className="border-secondary-700 text-secondary-800 mb-2 text-sm font-medium uppercase">
+                <h3 className="rotulo mb-2">
                   {fieldName("details", "Detailed Description")}
                 </h3>
-                <p className="text-cloud-700 whitespace-pre-line">
+                <p className="text-tinta-800 whitespace-pre-line">
                   {proposal.details}
                 </p>
               </div>
 
               <div>
-                <h3 className="border-secondary-700 text-secondary-800 mb-2 text-sm font-medium uppercase">
+                <h3 className="rotulo mb-2">
                   {fieldName("pitch", "Why this talk matters")}
                 </h3>
-                <p className="text-cloud-700 whitespace-pre-line">
+                <p className="text-tinta-800 whitespace-pre-line">
                   {proposal.pitch}
                 </p>
               </div>
@@ -146,10 +142,10 @@ export default function Show({ proposal, speaker, cfp }: ShowProps) {
 
           {/* Speaker Information */}
           <div
-            className="card border-secondary-700 animate-slide-up mb-8 border"
+            className="card animate-slide-up mb-8"
             style={{ animationDelay: "0.1s" }}
           >
-            <h2 className="border-secondary-700 mb-6 border-b pb-4 text-xl font-bold">
+            <h2 className="section-title border-traco mb-6 border-b pb-4">
               Speaker Profile
             </h2>
 
@@ -159,56 +155,46 @@ export default function Show({ proposal, speaker, cfp }: ShowProps) {
                   <img
                     src={speaker.photo_url}
                     alt={`${speaker.name}'s profile photo`}
-                    className="border-secondary-700 h-32 w-32 rounded-full border-2 object-cover shadow-lg"
+                    className="border-tinta-500 h-32 w-32 border object-cover"
                   />
                 ) : (
-                  <div className="border-secondary-700 bg-secondary-50 flex h-32 w-32 items-center justify-center rounded-full border-2 shadow-lg">
-                    <UserIcon className="text-secondary-400 h-16 w-16" />
+                  <div className="border-tinta-500 flex h-32 w-32 items-center justify-center border">
+                    <UserIcon className="text-tinta-200 h-16 w-16" />
                   </div>
                 )}
               </div>
 
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 <div>
-                  <h3 className="border-secondary-700 text-secondary-800 mb-2 text-sm font-medium uppercase">
-                    Name
-                  </h3>
-                  <p className="text-cloud-700">{speaker.name}</p>
+                  <h3 className="rotulo mb-2">Name</h3>
+                  <p className="text-tinta-800">{speaker.name}</p>
                 </div>
 
                 <div>
-                  <h3 className="border-secondary-700 text-secondary-800 mb-2 text-sm font-medium uppercase">
-                    Email
-                  </h3>
-                  <p className="text-cloud-700">{speaker.email}</p>
+                  <h3 className="rotulo mb-2">Email</h3>
+                  <p className="text-tinta-800">{speaker.email}</p>
                 </div>
               </div>
 
               <div>
-                <h3 className="border-secondary-700 text-secondary-800 mb-2 text-sm font-medium uppercase">
-                  Company/Organization
-                </h3>
-                <p className="text-cloud-700">
+                <h3 className="rotulo mb-2">Company/Organization</h3>
+                <p className="text-tinta-800">
                   {speaker.role && <span>{speaker.role} @ </span>}
                   {speaker.company ?? "—"}
                 </p>
               </div>
 
               <div>
-                <h3 className="border-secondary-700 text-secondary-800 mb-2 text-sm font-medium uppercase">
-                  Bio
-                </h3>
-                <p className="text-cloud-700 whitespace-pre-line">
+                <h3 className="rotulo mb-2">Bio</h3>
+                <p className="text-tinta-800 whitespace-pre-line">
                   {speaker.bio}
                 </p>
               </div>
 
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 <div>
-                  <h3 className="border-secondary-700 text-secondary-800 mb-2 text-sm font-medium uppercase">
-                    Socials
-                  </h3>
-                  <p className="text-cloud-700">{speaker.socials ?? "—"}</p>
+                  <h3 className="rotulo mb-2">Socials</h3>
+                  <p className="text-tinta-800">{speaker.socials ?? "—"}</p>
                 </div>
               </div>
             </div>
@@ -226,7 +212,7 @@ export default function Show({ proposal, speaker, cfp }: ShowProps) {
               } animate-slide-up mb-8`}
               style={{ animationDelay: "0.2s" }}
             >
-              <h2 className="mb-4 text-xl font-bold">
+              <h2 className="section-title mb-4">
                 Feedback from the Committee
               </h2>
 

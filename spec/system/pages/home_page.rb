@@ -4,5 +4,5 @@ class HomePage < BasePage
   section :nav, "header"
   section :actions, "div[data-test-id='home-actions']"
 
-  load_validation { has_text?("Call for Proposals") }
+  load_validation { has_text?(/Call for\s+Proposals/i) }
 end

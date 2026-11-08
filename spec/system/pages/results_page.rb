@@ -6,5 +6,5 @@ class ResultsPage < BasePage
   section :waitlisted_proposals, Sections::Table, "[data-test-id='waitlisted-proposals'] table"
   section :rejected_proposals, Sections::Table, "[data-test-id='rejected-proposals'] table"
 
-  load_validation { has_text?("Evaluation Results") }
+  load_validation { has_text?(/Evaluation Results/i) }
 end

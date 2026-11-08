@@ -69,8 +69,8 @@ export default function Form({ proposal, speaker, cfp }: FormProps) {
 
   return (
     <form onSubmit={submit} className="space-y-8">
-      <div className="card border-secondary-800 animate-slide-up border">
-        <h2 className="border-secondary-800 mb-6 border-b pb-4 text-xl font-bold">
+      <div className="card animate-slide-up">
+        <h2 className="section-title border-traco mb-6 border-b pb-4">
           {fieldName("talk_header", "Talk Information")}
         </h2>
 
@@ -92,7 +92,7 @@ export default function Form({ proposal, speaker, cfp }: FormProps) {
               required={submitting}
             />
             {formErrors.title && (
-              <p className="mb-4 text-sm text-red-600">
+              <p className="text-error-600 mb-4 text-sm">
                 {formErrors.title.join(", ")}
               </p>
             )}
@@ -114,7 +114,7 @@ export default function Form({ proposal, speaker, cfp }: FormProps) {
               required={submitting}
             />
             {formErrors.abstract && (
-              <p className="mb-4 text-sm text-red-600">
+              <p className="text-error-600 mb-4 text-sm">
                 {formErrors.abstract.join(", ")}
               </p>
             )}
@@ -137,7 +137,7 @@ export default function Form({ proposal, speaker, cfp }: FormProps) {
                 }))}
               />
               {formErrors.track && (
-                <p className="mb-4 text-sm text-red-600">
+                <p className="text-error-600 mb-4 text-sm">
                   {formErrors.track.join(", ")}
                 </p>
               )}
@@ -160,11 +160,11 @@ export default function Form({ proposal, speaker, cfp }: FormProps) {
               required={submitting}
             />
             {formErrors.details && (
-              <p className="mb-4 text-sm text-red-600">
+              <p className="text-error-600 mb-4 text-sm">
                 {formErrors.details.join(", ")}
               </p>
             )}
-            <p className="text-cloud-700 mt-1 text-sm">
+            <p className="text-tinta-800 mt-1 text-sm">
               {fieldName(
                 "detailsNotice",
                 "This is for the review committee only and won't be published.",
@@ -188,7 +188,7 @@ export default function Form({ proposal, speaker, cfp }: FormProps) {
               required={submitting}
             />
             {formErrors.pitch && (
-              <p className="mb-4 text-sm text-red-600">
+              <p className="text-error-600 mb-4 text-sm">
                 {formErrors.pitch.join(", ")}
               </p>
             )}
@@ -197,14 +197,11 @@ export default function Form({ proposal, speaker, cfp }: FormProps) {
       </div>
 
       {/* Profile Section */}
-      <div
-        className="card border-secondary-800 animate-slide-up border"
-        style={{ animationDelay: "0.1s" }}
-      >
-        <h2 className="border-secondary-800 mb-6 border-b pb-4 text-xl font-bold">
+      <div className="card animate-slide-up" style={{ animationDelay: "0.1s" }}>
+        <h2 className="section-title border-traco mb-6 border-b pb-4">
           Speaker Profile
         </h2>
-        <p className="mb-4 flex items-center text-amber-600">
+        <p className="text-warning-600 mb-4 flex items-center">
           <AlertCircle className="mr-2 hidden h-4 w-4 sm:inline" />
           Note: Your speaker profile information will be updated for all your
           proposals.
@@ -227,7 +224,7 @@ export default function Form({ proposal, speaker, cfp }: FormProps) {
                 required={submitting}
               />
               {formErrors.speaker_name && (
-                <p className="mb-4 text-sm text-red-600">
+                <p className="text-error-600 mb-4 text-sm">
                   {formErrors.speaker_name.join(", ")}
                 </p>
               )}
@@ -249,7 +246,7 @@ export default function Form({ proposal, speaker, cfp }: FormProps) {
                 required={submitting}
               />
               {formErrors.speaker_email && (
-                <p className="mb-4 text-sm text-red-600">
+                <p className="text-error-600 mb-4 text-sm">
                   {formErrors.speaker_email.join(", ")}
                 </p>
               )}
@@ -271,7 +268,7 @@ export default function Form({ proposal, speaker, cfp }: FormProps) {
               placeholder="Where you work (optional)"
             />
             {formErrors.speaker_company && (
-              <p className="mb-4 text-sm text-red-600">
+              <p className="text-error-600 mb-4 text-sm">
                 {formErrors.speaker_company.join(", ")}
               </p>
             )}
@@ -290,7 +287,7 @@ export default function Form({ proposal, speaker, cfp }: FormProps) {
               placeholder="Your role at the company (optional)"
             />
             {formErrors.speaker_role && (
-              <p className="mb-4 text-sm text-red-600">
+              <p className="text-error-600 mb-4 text-sm">
                 {formErrors.speaker_role.join(", ")}
               </p>
             )}
@@ -309,7 +306,7 @@ export default function Form({ proposal, speaker, cfp }: FormProps) {
               required={submitting}
             />
             {formErrors.speaker_bio && (
-              <p className="mb-4 text-sm text-red-600">
+              <p className="text-error-600 mb-4 text-sm">
                 {formErrors.speaker_bio.join(", ")}
               </p>
             )}
@@ -330,7 +327,7 @@ export default function Form({ proposal, speaker, cfp }: FormProps) {
                 className="input-field"
               />
               {formErrors.speaker_socials && (
-                <p className="mb-4 text-sm text-red-600">
+                <p className="text-error-600 mb-4 text-sm">
                   {formErrors.speaker_socials.join(", ")}
                 </p>
               )}
@@ -347,7 +344,7 @@ export default function Form({ proposal, speaker, cfp }: FormProps) {
                   <img
                     src={data.proposal.speaker_photo_url}
                     alt="Current profile photo"
-                    className="h-24 w-24 rounded-lg object-cover"
+                    className="h-24 w-24 object-cover"
                   />
                 </div>
               )}
@@ -379,13 +376,13 @@ export default function Form({ proposal, speaker, cfp }: FormProps) {
                   : "Upload Photo"}
               </button>
               {data.proposal.speaker_photo && (
-                <p className="text-cloud-700 text-sm">
+                <p className="text-tinta-800 text-sm">
                   Selected: {data.proposal.speaker_photo.name}
                 </p>
               )}
             </div>
             {formErrors.speaker_photo && (
-              <p className="mb-4 text-sm text-red-600">
+              <p className="text-error-600 mb-4 text-sm">
                 {formErrors.speaker_photo.join(", ")}
               </p>
             )}

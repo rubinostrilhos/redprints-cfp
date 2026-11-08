@@ -47,7 +47,7 @@ describe "Proposals" do
 
     expect(proposals_page.proposals).to have_rows(count: 1)
 
-    expect(proposals_page.proposals.first_row).to have_text "Draft"
+    expect(proposals_page.proposals.first_row).to have_text(/Draft/i)
   end
 
   context "with existing proposal draft" do
@@ -60,7 +60,7 @@ describe "Proposals" do
       proposals_page.load
 
       expect(proposals_page.proposals).to have_rows(count: 1)
-      expect(proposals_page.proposals.first_row).to have_text "My draft proposal"
+      expect(proposals_page.proposals.first_row).to have_text(/My draft proposal/i)
 
       proposals_page.proposals.first_row.click
 
@@ -87,7 +87,7 @@ describe "Proposals" do
       expect(proposals_page).to be_displayed
 
       expect(proposals_page.proposals).to have_rows(count: 1)
-      expect(proposals_page.proposals.first_row).to have_text "Submitted"
+      expect(proposals_page.proposals.first_row).to have_text(/Submitted/i)
 
       # Check email
       perform_enqueued_jobs
@@ -104,7 +104,7 @@ describe "Proposals" do
       proposals_page.load
 
       expect(proposals_page.proposals).to have_rows(count: 1)
-      expect(proposals_page.proposals.first_row).to have_text "My draft proposal"
+      expect(proposals_page.proposals.first_row).to have_text(/My draft proposal/i)
 
       proposals_page.proposals.first_row.click
 
@@ -115,7 +115,7 @@ describe "Proposals" do
       end
 
       expect(proposals_page).to be_displayed
-      expect(page).to have_text "You haven’t submitted any proposals yet"
+      expect(page).to have_text(/You haven’t submitted any proposals yet/i)
     end
 
     context "when deadline passed" do
@@ -125,7 +125,7 @@ describe "Proposals" do
         proposal_page.load(id: proposal.external_id)
         expect(proposal_page).to be_displayed(id: proposal.external_id)
 
-        expect(page).not_to have_text "Edit Proposal"
+        expect(page).not_to have_text(/Edit Proposal/i)
       end
     end
   end
@@ -137,11 +137,11 @@ describe "Proposals" do
       home_page.load
 
       home_page.nav.within do |nav|
-        expect(page).not_to have_text "Submit proposal"
+        expect(page).not_to have_text(/Submit proposal/i)
       end
 
       home_page.actions.within do |nav|
-        expect(page).not_to have_text "Submit proposal"
+        expect(page).not_to have_text(/Submit proposal/i)
       end
 
       visit "/proposals/new"
@@ -155,7 +155,7 @@ describe "Proposals" do
 
       expect(proposals_page).to be_displayed
 
-      expect(page).not_to have_text("Submit Your First Proposal")
+      expect(page).not_to have_text(/Submit Your First Proposal/i)
     end
   end
 end
