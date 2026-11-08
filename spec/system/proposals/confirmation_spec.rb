@@ -20,8 +20,8 @@ describe "Proposal Acceptance" do
     proposal_page.load(id: accepted_proposal.external_id)
 
     expect(proposal_page).to be_displayed
-    expect(proposal_page).to have_text "Building Scalable Ruby Applications"
-    expect(proposal_page).to have_text "Accepted"
+    expect(proposal_page).to have_text(/Building Scalable Ruby Applications/i)
+    expect(proposal_page).to have_text(/Accepted/i)
 
     expect(proposal_page).to have_button "Confirm Participation"
 
@@ -31,7 +31,7 @@ describe "Proposal Acceptance" do
 
     expect(proposal_page).to be_displayed
 
-    expect(proposal_page).to have_text "Confirmed"
+    expect(proposal_page).to have_text(/Confirmed/i)
 
     expect(proposal_page).not_to have_button "Confirm Participation"
   end

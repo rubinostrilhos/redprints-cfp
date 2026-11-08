@@ -1,12 +1,63 @@
-/* Update this file to change the colors and the font */
+/*
+  Tropical on Rails 2027 theme.
+  Tokens from the "Tropical on Rails 27 Social" design system (tokens.json).
+  Update this file to change the colors and the fonts.
+*/
 @theme {
-  --font-display: 'Martian Grotesk', 'sans-serif';
+  --font-display: "Oferta do Dia", Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --font-sans: "IBM Plex Mono", ui-monospace, Menlo, monospace;
 
-  /* https://oklch.com/#0.6122,0.2313,22.61,100 */
-  --clr-primary-chroma: 0.2313;
-  --clr-primary-hue: 22.61;
+  /* Palette */
+  --color-creme-100: #f8f6ef;
+  --color-creme-500: #5e6b82;
+  --color-creme-600: #414d62;
+  --color-tinta-200: #aec0e0;
+  --color-tinta-500: #1c345f;
+  --color-tinta-700: #12233f;
+  --color-tinta-800: #0e1a2f;
+  --color-tinta-900: #0a1424;
+  --color-marca-azul: #69a8c5;
+  --color-marca-verde: #385627;
 
-  /* https://oklch.com/#0.6804,0.034,261.69,100 */
-  --clr-secondary-chroma: 0.034;
-  --clr-secondary-hue: 261.69;
+  --color-logo: #69a8c5;
+
+  /* Functional colors the DS does not cover (form errors, counters) */
+  --color-error-600: #b91c1c;
+  --color-warning-600: #92400e;
+
+  /* The brand never uses rounded corners */
+  --radius-xs: 0;
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-2xl: 0;
+  --radius-3xl: 0;
+  --radius-4xl: 0;
+}
+
+/*
+  Paper tokens. `inline` makes utilities read the variable at the element,
+  so wrapping a section in .tema-tinta switches bg-fundo, text-texto, etc.
+*/
+@theme inline {
+  --color-fundo: var(--fundo);
+  --color-texto: var(--texto);
+  --color-texto-apoio: var(--texto-apoio);
+  --color-traco: var(--traco);
+}
+
+:root {
+  --fundo: var(--color-creme-100);
+  --texto: var(--color-tinta-500);
+  --texto-apoio: var(--color-creme-600);
+  --traco: #dcd9d2;
+}
+
+.tema-tinta {
+  --fundo: var(--color-tinta-900);
+  --texto: var(--color-creme-100);
+  --texto-apoio: var(--color-tinta-200);
+  --traco: var(--color-tinta-700);
 }

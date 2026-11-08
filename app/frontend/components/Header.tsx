@@ -24,9 +24,9 @@ export function Header({ currentUser }: HeaderProps) {
   };
 
   return (
-    <header className="bg-cloud-50 border-primary-200 sticky top-0 z-10 border-b">
+    <header className="tema-tinta bg-fundo border-traco sticky top-0 z-10 border-b">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-18 items-center justify-between">
           <div className="flex items-center">
             {url === "/" ? (
               <Logo />
@@ -45,7 +45,7 @@ export function Header({ currentUser }: HeaderProps) {
             <div className="sm:hidden print:hidden">
               <button
                 onClick={toggleMenu}
-                className="hover:text-primary-700 focus:ring-primary-500 inline-flex items-center justify-center rounded-md p-2 text-neutral-600 hover:bg-neutral-100 focus:ring-2 focus:outline-none focus:ring-inset"
+                className="text-texto-apoio hover:text-texto focus-visible:outline-marca-azul inline-flex items-center justify-center p-2 focus:outline-none focus-visible:outline-2"
               >
                 <span className="sr-only">Open main menu</span>
                 {isMenuOpen ? (
@@ -58,14 +58,14 @@ export function Header({ currentUser }: HeaderProps) {
           )}
 
           {currentUser && (
-            <nav className="hidden items-center justify-end space-x-4 sm:flex print:hidden">
+            <nav className="hidden items-center justify-end gap-6 sm:flex print:hidden">
               {!cfp_closed && (
                 <Link
                   href="/proposals/new"
-                  className={`text-sm font-medium transition-colors ${
+                  className={`text-xs font-semibold tracking-[0.08em] uppercase transition-colors ${
                     url === "/proposals/new"
-                      ? "text-secondary-800 border-secondary-800 border-b"
-                      : "text-primary hover:text-primary-300"
+                      ? "text-marca-azul"
+                      : "text-texto-apoio hover:text-texto"
                   }`}
                 >
                   Submit proposal
@@ -74,10 +74,10 @@ export function Header({ currentUser }: HeaderProps) {
 
               <Link
                 href="/proposals"
-                className={`text-sm font-medium transition-colors ${
+                className={`text-xs font-semibold tracking-[0.08em] uppercase transition-colors ${
                   url === "/proposals"
-                    ? "text-secondary-800 border-secondary-800 border-b"
-                    : "text-primary hover:text-primary-300"
+                    ? "text-marca-azul"
+                    : "text-texto-apoio hover:text-texto"
                 }`}
               >
                 My proposals
@@ -85,7 +85,7 @@ export function Header({ currentUser }: HeaderProps) {
               {currentUser.is_reviewer && (
                 <Link
                   href="/evaluations"
-                  className="btn btn-primary px-2 py-1 text-sm"
+                  className="btn border-marca-azul text-marca-azul hover:bg-marca-azul hover:text-tinta-900 px-3 py-1.5 text-xs"
                   title="Review"
                 >
                   Review
@@ -96,7 +96,7 @@ export function Header({ currentUser }: HeaderProps) {
                 method="delete"
                 onClick={() => router.clearHistory()}
                 as="button"
-                className="text-cloud-800 hover:text-cloud-700 cursor-pointer text-sm font-medium transition-colors"
+                className="text-texto-apoio hover:text-texto cursor-pointer text-xs font-semibold tracking-[0.08em] uppercase transition-colors"
                 title="Sign out"
               >
                 Sign out
@@ -106,10 +106,10 @@ export function Header({ currentUser }: HeaderProps) {
         </div>
         {currentUser && (
           <div className={`sm:hidden ${isMenuOpen ? "block" : "hidden"}`}>
-            <div className="border-secondary-800 space-y-1 border-b bg-white px-2 pt-2 pb-3">
+            <div className="border-traco space-y-1 border-t px-2 pt-2 pb-3">
               <Link
                 href="/"
-                className={`block w-full rounded-md px-3 py-2 text-left text-base font-medium`}
+                className="text-texto-apoio hover:text-texto block w-full px-3 py-2 text-left text-xs font-semibold tracking-[0.08em] uppercase"
               >
                 Home
               </Link>
@@ -119,7 +119,7 @@ export function Header({ currentUser }: HeaderProps) {
                   onClick={() => {
                     setIsMenuOpen(false);
                   }}
-                  className={`block w-full rounded-md px-3 py-2 text-left text-base font-medium`}
+                  className="text-texto-apoio hover:text-texto block w-full px-3 py-2 text-left text-xs font-semibold tracking-[0.08em] uppercase"
                 >
                   Submit Proposal
                 </Link>
@@ -127,7 +127,7 @@ export function Header({ currentUser }: HeaderProps) {
               {currentUser.is_reviewer && (
                 <Link
                   href="/evaluations"
-                  className="btn btn-primary px-2 py-1 text-sm"
+                  className="btn border-marca-azul text-marca-azul hover:bg-marca-azul hover:text-tinta-900 px-3 py-1.5 text-xs"
                   title="Review"
                 >
                   Review
@@ -138,7 +138,7 @@ export function Header({ currentUser }: HeaderProps) {
                 onClick={() => {
                   setIsMenuOpen(false);
                 }}
-                className={`block w-full rounded-md px-3 py-2 text-left text-base font-medium`}
+                className="text-texto-apoio hover:text-texto block w-full px-3 py-2 text-left text-xs font-semibold tracking-[0.08em] uppercase"
               >
                 My Proposals
               </Link>

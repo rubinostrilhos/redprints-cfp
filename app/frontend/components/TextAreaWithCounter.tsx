@@ -51,7 +51,7 @@ const TextAreaWithCounter = ({
             ? "text-error-600 font-medium"
             : isNearLimit
               ? "text-warning-600"
-              : "text-neutral-500"
+              : "text-texto-apoio"
         } transition-colors`}
       >
         {characterCount}/{maxLength} characters

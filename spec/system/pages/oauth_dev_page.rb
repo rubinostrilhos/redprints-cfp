@@ -3,5 +3,5 @@ class OAuthDevPage < BasePage
 
   section :form, Sections::Form
 
-  load_validation { has_text?("User Info") }
+  load_validation { has_text?(/User Info/i) }
 end

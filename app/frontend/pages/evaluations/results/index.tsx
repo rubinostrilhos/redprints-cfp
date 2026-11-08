@@ -160,36 +160,39 @@ export default function Index({ reviews, evaluation, proposals }: IndexProps) {
 
     return (
       <div className="not-first:mt-8" data-test-id={test_id}>
-        <h2 className="mb-4 text-xl font-bold">
+        <h2 className="section-title mb-4">
           {title} ({proposals.length})
         </h2>
-        <div className="card border-secondary-800 animate-slide-up overflow-hidden border">
+        <div className="card animate-slide-up overflow-hidden !p-0">
           <div className="overflow-x-auto">
-            <table className="divide-secondary-800 min-w-full divide-y">
+            <table className="divide-traco min-w-full divide-y">
               <thead>
                 <tr>
                   <th
                     scope="col"
-                    className="text-cloud-800 w-1/3 p-2 text-left text-xs font-medium tracking-wider uppercase sm:px-6 sm:py-3"
+                    className="rotulo border-tinta-500 w-1/3 border-b p-2 text-left sm:px-6 sm:py-3"
                   >
                     Title
                   </th>
                   <th
                     scope="col"
-                    className="text-cloud-800 p-2 text-left text-xs font-medium tracking-wider uppercase sm:px-6 sm:py-3"
+                    className="rotulo border-tinta-500 border-b p-2 text-left sm:px-6 sm:py-3"
                   >
                     Score
                   </th>
                   <th
                     scope="col"
-                    className="text-cloud-800 p-2 text-left text-xs font-medium tracking-wider uppercase sm:px-6 sm:py-3"
+                    className="rotulo border-tinta-500 border-b p-2 text-left sm:px-6 sm:py-3"
                   >
                     Comments
                   </th>
-                  <th scope="col" className="px-2 py-4 print:hidden"></th>
+                  <th
+                    scope="col"
+                    className="border-tinta-500 border-b px-2 py-4 print:hidden"
+                  ></th>
                 </tr>
               </thead>
-              <tbody className="divide-secondary-800 divide-y bg-white">
+              <tbody className="divide-traco divide-y">
                 {proposals.map((proposal) => {
                   const proposal_reviews = reviews.filter(
                     (review) => review.proposal!.id == proposal.id,
@@ -205,19 +208,19 @@ export default function Index({ reviews, evaluation, proposals }: IndexProps) {
                           <a
                             href={`/reviews/${current_review.id}`}
                             target="_blank"
-                            className="text-cloud-900 hover:text-secondary-700 text-sm leading-tight font-medium"
+                            className="text-texto hover:text-tinta-800 text-sm leading-tight font-semibold"
                             rel="noreferrer"
                           >
                             {proposal.title}
                           </a>
                         )}
                         {!current_review && (
-                          <div className="text-cloud-900 text-sm leading-tight font-medium">
+                          <div className="text-texto text-sm leading-tight font-semibold">
                             {proposal.title}
                           </div>
                         )}
                         <div className="mt-2 flex items-center space-x-2">
-                          <div className="text-secondary-700 text-sm">
+                          <div className="text-texto-apoio text-sm">
                             {proposal.speaker_profile!.name}
                           </div>
                           <div className="badge badge-submitted">
@@ -260,7 +263,7 @@ export default function Index({ reviews, evaluation, proposals }: IndexProps) {
                             return (
                               <div
                                 key={index}
-                                className="text-cloud-600 rounded bg-neutral-50 p-2 text-xs print:p-0.5"
+                                className="text-creme-600 border-traco border bg-white/60 p-2 text-xs print:p-0.5"
                               >
                                 <div
                                   className={
@@ -277,7 +280,7 @@ export default function Index({ reviews, evaluation, proposals }: IndexProps) {
                                     onClick={() =>
                                       toggleCommentExpansion(commentKey)
                                     }
-                                    className="text-primary-600 hover:text-primary-800 mt-1 flex items-center text-xs font-medium print:hidden"
+                                    className="text-tinta-500 hover:text-tinta-800 mt-1 flex items-center text-xs font-semibold underline underline-offset-4 print:hidden"
                                   >
                                     {isExpanded ? (
                                       <>
@@ -303,7 +306,7 @@ export default function Index({ reviews, evaluation, proposals }: IndexProps) {
                             <div className="flex justify-end space-x-0.5 print:hidden">
                               <button
                                 type="button"
-                                className={`btn cursor-pointer px-1 py-1 text-xs ${selectedProposals[proposal.id] === "accepted" ? "bg-green-800 text-white hover:bg-green-700 focus:ring-green-600" : "border border-green-800 text-green-800 hover:bg-green-100"}`}
+                                className={`btn cursor-pointer px-1 py-1 text-xs ${selectedProposals[proposal.id] === "accepted" ? "border-marca-verde bg-marca-verde text-creme-100 hover:opacity-90" : "border-marca-verde text-marca-verde hover:bg-marca-verde/10"}`}
                                 onClick={() =>
                                   toggleProposalSelection(
                                     proposal.id,
@@ -320,7 +323,7 @@ export default function Index({ reviews, evaluation, proposals }: IndexProps) {
                               </button>
                               <button
                                 type="button"
-                                className={`btn cursor-pointer px-1 py-1 text-xs ${selectedProposals[proposal.id] === "waitlisted" ? "bg-cloud-600 hover:bg-cloud-500 focus:ring-cloud-500 text-white" : "text-cloud-600 hover:bg-cloud-100 border-cloud-600 border"}`}
+                                className={`btn cursor-pointer px-1 py-1 text-xs ${selectedProposals[proposal.id] === "waitlisted" ? "border-tinta-200 bg-tinta-200 text-tinta-900 hover:opacity-90" : "border-creme-600 text-creme-600 hover:bg-tinta-200/30"}`}
                                 onClick={() =>
                                   toggleProposalSelection(
                                     proposal.id,
@@ -338,7 +341,7 @@ export default function Index({ reviews, evaluation, proposals }: IndexProps) {
                               </button>
                               <button
                                 type="button"
-                                className={`btn cursor-pointer px-1 py-1 text-xs ${selectedProposals[proposal.id] === "rejected" ? "bg-red-800 text-white hover:bg-red-700 focus:ring-red-600" : "border border-red-800 text-red-800 hover:bg-red-100"}`}
+                                className={`btn cursor-pointer px-1 py-1 text-xs ${selectedProposals[proposal.id] === "rejected" ? "border-error-600 bg-error-600 text-white hover:opacity-90" : "border-error-600 text-error-600 hover:bg-error-600/5"}`}
                                 onClick={() =>
                                   toggleProposalSelection(
                                     proposal.id,
@@ -385,7 +388,7 @@ export default function Index({ reviews, evaluation, proposals }: IndexProps) {
       <div className="container mx-auto px-4 py-8 sm:px-6 lg:px-8 print:w-full print:px-0">
         <Link
           href={`/evaluations/${evaluation.id}/reviews`}
-          className="text-cloud-600 hover:text-cloud-700 mb-6 flex items-center transition-colors print:hidden"
+          className="rotulo hover:text-texto mb-6 flex items-center transition-colors print:hidden"
         >
           <ArrowLeftIcon className="mr-1 h-4 w-4" />
           Back to evaluation
@@ -394,20 +397,20 @@ export default function Index({ reviews, evaluation, proposals }: IndexProps) {
           <form onSubmit={submitReview}>
             <div className="animate-fade-in mb-8 flex flex-col items-start justify-between sm:flex-row sm:items-center">
               <div>
-                <h1 className="mb-2 text-3xl font-bold">Evaluation Results</h1>
+                <h1 className="page-title mb-3">Evaluation Results</h1>
 
                 <div className="space-y-2">
                   <div className="flex items-center space-x-4 print:hidden">
-                    <span className="text-cloud-700 text-sm font-medium">
+                    <span className="text-tinta-800 text-sm font-semibold">
                       Progress:
                     </span>
-                    <div className="bg-secondary-200 h-2 max-w-xs flex-1 rounded-full">
+                    <div className="bg-traco h-2 max-w-xs flex-1">
                       <div
-                        className="bg-secondary-600 h-2 rounded-full transition-all duration-300"
+                        className="bg-tinta-500 h-2 transition-all duration-300"
                         style={{ width: `${Math.round(progress * 100)}%` }}
                       ></div>
                     </div>
-                    <span className="text-cloud-600 text-sm">
+                    <span className="text-texto-apoio text-sm">
                       {Math.round(progress * 100)}%
                     </span>
                   </div>
@@ -428,8 +431,8 @@ export default function Index({ reviews, evaluation, proposals }: IndexProps) {
             </div>
 
             {reviews.length === 0 ? (
-              <div className="card border-secondary-700 animate-slide-up border py-16 text-center">
-                <h3 className="text-cloud-800 mb-4 text-xl font-medium">
+              <div className="card animate-slide-up py-16 text-center">
+                <h3 className="text-texto mb-4 text-lg font-semibold">
                   This evaluation has no proposals for review
                 </h3>
               </div>

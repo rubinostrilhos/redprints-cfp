@@ -2,74 +2,87 @@
 
 @import "tailwindcss";
 
-@theme {
-  --font-display: 'Martian Grotesk', 'sans-serif';
-
-  --clr-primary-chroma: 0.17;
-  --clr-primary-hue: 121;
-
-  --clr-secondary-chroma: 0.12;
-  --clr-secondary-hue: 281;
-}
-
 @import "./theme.css";
 @source "../../views";
 
 @custom-variant dark (&:is(.dark *));
 
+/*
+  Compatibility aliases: the template's primary/secondary/cloud scales (and the
+  Tailwind grays) now point at the Tropical palette, so pages not yet migrated
+  to the DS tokens (reviews, evaluations) still render in brand colors.
+  New code should use the DS tokens from theme.css (tinta-*, creme-*, marca-*,
+  fundo, texto, texto-apoio, traco).
+*/
 @theme {
-  --color-primary: oklch(65% var(--clr-primary-chroma) var(--clr-primary-hue));
+  --color-primary: var(--color-tinta-500);
+  --color-primary-50: var(--color-creme-100);
+  --color-primary-100: #e6edf6;
+  --color-primary-200: var(--color-tinta-200);
+  --color-primary-300: var(--color-tinta-200);
+  --color-primary-400: var(--color-marca-azul);
+  --color-primary-500: var(--color-tinta-500);
+  --color-primary-600: var(--color-tinta-500);
+  --color-primary-700: var(--color-tinta-800);
+  --color-primary-800: var(--color-tinta-800);
+  --color-primary-900: var(--color-tinta-900);
+  --color-primary-950: var(--color-tinta-900);
 
-  --color-secondary: oklch(65% var(--clr-secondary-chroma) var(--clr-secondary-hue));
+  --color-secondary: var(--color-tinta-500);
+  --color-secondary-50: #eef1f6;
+  --color-secondary-100: #e6edf6;
+  --color-secondary-200: var(--color-tinta-200);
+  --color-secondary-300: var(--color-tinta-200);
+  --color-secondary-400: var(--color-creme-500);
+  --color-secondary-500: var(--color-tinta-500);
+  --color-secondary-600: var(--color-tinta-500);
+  --color-secondary-700: var(--color-tinta-500);
+  --color-secondary-800: var(--color-tinta-500);
+  --color-secondary-900: var(--color-tinta-800);
+  --color-secondary-950: var(--color-tinta-900);
 
-  /* Color versions */
-  --color-primary-50: oklch(97% var(--clr-primary-chroma) var(--clr-primary-hue));
-  --color-primary-100: oklch(95% var(--clr-primary-chroma) var(--clr-primary-hue));
-  --color-primary-200: oklch(90% var(--clr-primary-chroma) var(--clr-primary-hue));
-  --color-primary-300: oklch(85% var(--clr-primary-chroma) var(--clr-primary-hue));
-  --color-primary-400: oklch(75% var(--clr-primary-chroma) var(--clr-primary-hue));
-  --color-primary-500: oklch(65% var(--clr-primary-chroma) var(--clr-primary-hue));
-  --color-primary-600: oklch(55% var(--clr-primary-chroma) var(--clr-primary-hue));
-  --color-primary-700: oklch(45% var(--clr-primary-chroma) var(--clr-primary-hue));
-  --color-primary-800: oklch(35% var(--clr-primary-chroma) var(--clr-primary-hue));
-  --color-primary-900: oklch(25% var(--clr-primary-chroma) var(--clr-primary-hue));
-  --color-primary-950: oklch(15% var(--clr-primary-chroma) var(--clr-primary-hue));
+  --color-cloud-50: var(--color-creme-100);
+  --color-cloud-100: #efece4;
+  --color-cloud-200: #dcd9d2;
+  --color-cloud-300: #c9c6bf;
+  --color-cloud-400: #9aa3b2;
+  --color-cloud-500: var(--color-creme-500);
+  --color-cloud-600: var(--color-creme-500);
+  --color-cloud-700: var(--color-creme-600);
+  --color-cloud-800: var(--color-tinta-800);
+  --color-cloud-900: var(--color-tinta-900);
+  --color-cloud-950: var(--color-tinta-900);
 
-  --color-secondary-50: oklch(97% var(--clr-secondary-chroma) var(--clr-secondary-hue));
-  --color-secondary-100: oklch(95% var(--clr-secondary-chroma) var(--clr-secondary-hue));
-  --color-secondary-200: oklch(90% var(--clr-secondary-chroma) var(--clr-secondary-hue));
-  --color-secondary-300: oklch(85% var(--clr-secondary-chroma) var(--clr-secondary-hue));
-  --color-secondary-400: oklch(75% var(--clr-secondary-chroma) var(--clr-secondary-hue));
-  --color-secondary-500: oklch(65% var(--clr-secondary-chroma) var(--clr-secondary-hue));
-  --color-secondary-600: oklch(55% var(--clr-secondary-chroma) var(--clr-secondary-hue));
-  --color-secondary-700: oklch(45% var(--clr-secondary-chroma) var(--clr-secondary-hue));
-  --color-secondary-800: oklch(35% var(--clr-secondary-chroma) var(--clr-secondary-hue));
-  --color-secondary-900: oklch(25% var(--clr-secondary-chroma) var(--clr-secondary-hue));
-  --color-secondary-950: oklch(15% var(--clr-secondary-chroma) var(--clr-secondary-hue));
+  --color-neutral-50: var(--color-creme-100);
+  --color-neutral-100: #efece4;
+  --color-neutral-200: #dcd9d2;
+  --color-neutral-300: #c9c6bf;
+  --color-neutral-400: #9aa3b2;
+  --color-neutral-500: var(--color-creme-500);
+  --color-neutral-600: var(--color-creme-600);
+  --color-neutral-700: var(--color-creme-600);
+  --color-neutral-800: var(--color-tinta-800);
+  --color-neutral-900: var(--color-tinta-900);
 
-  --color-cloud-50: oklch(100% 0 0); /* Pure white */
-  --color-cloud-100: oklch(95% 0.0 0);
-  --color-cloud-200: oklch(90% 0.0 0);
-  --color-cloud-300: oklch(85% 0.0 0);
-  --color-cloud-400: oklch(75% 0.0 0);
-  --color-cloud-500: oklch(65% 0.0 0);
-  --color-cloud-600: oklch(55% 0.0 0);
-  --color-cloud-700: oklch(45% 0.0 0);
-  --color-cloud-800: oklch(35% 0.0 0);
-  --color-cloud-900: oklch(25% 0.0 0);
-  --color-cloud-950: oklch(15% 0.0 0); /* dark grey */
+  --color-gray-50: var(--color-creme-100);
+  --color-gray-100: #efece4;
+  --color-gray-200: #dcd9d2;
+  --color-gray-300: #c9c6bf;
+  --color-gray-400: #9aa3b2;
+  --color-gray-500: var(--color-creme-500);
+  --color-gray-600: var(--color-creme-600);
+  --color-gray-700: var(--color-creme-600);
+  --color-gray-800: var(--color-tinta-800);
+  --color-gray-900: var(--color-tinta-900);
 
-  --shadow-soft: 0 2px 10px rgba(0, 0, 0, 0.05);
-  --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.08);
+  /* No shadows in the brand */
+  --shadow-soft: none;
+  --shadow-medium: none;
 }
 
 /*
   The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
+  so we set an explicit default: the DS `traco` line color.
 */
 @layer base {
   *,
@@ -77,60 +90,82 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
+    border-color: var(--traco, currentcolor);
+  }
+
+  body {
+    @apply bg-fundo font-mono text-tinta-800;
   }
 }
 
+/* DS `rotulo`: short uppercase label in IBM Plex Mono */
+@utility rotulo {
+  @apply font-mono text-xs font-semibold tracking-[0.08em] uppercase text-texto-apoio;
+}
+
+/* DS display headline: Oferta do Dia, uppercase, tight leading */
+@utility chamada {
+  @apply font-display font-normal leading-[0.9] uppercase text-texto;
+}
+
 @layer components {
+  .page-title {
+    @apply chamada text-4xl sm:text-5xl md:text-6xl;
+  }
+
+  .section-title {
+    @apply font-mono text-base font-semibold tracking-[0.08em] uppercase text-texto;
+  }
+
   .btn {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-60 disabled:!cursor-not-allowed;
+    @apply inline-flex items-center justify-center border px-6 py-3 font-mono text-sm font-semibold tracking-[0.08em] uppercase transition-colors duration-200 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-azul disabled:opacity-60 disabled:!cursor-not-allowed;
   }
 
   .btn-primary {
-    @apply bg-primary-500 text-white hover:bg-primary-700 focus:ring-primary-600 disabled:bg-primary-500;
+    @apply border-tinta-500 bg-tinta-500 text-creme-100 hover:border-tinta-800 hover:bg-tinta-800 disabled:bg-tinta-500;
   }
 
   .btn-secondary {
-    @apply bg-secondary-500 text-white hover:bg-secondary-700 focus:ring-secondary-600 disabled:bg-secondary-500;
+    @apply border-marca-verde bg-marca-verde text-creme-100 hover:opacity-90 disabled:bg-marca-verde;
   }
 
   .btn-outline {
-    @apply border border-cloud-700 bg-white text-cloud-700 hover:bg-cloud-200 focus:ring-cloud-700 disabled:bg-white;
+    @apply border-tinta-500 bg-transparent text-tinta-500 hover:bg-tinta-500/5;
   }
 
   .input-field {
-    @apply w-full px-4 py-2 border border-cloud-700 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:border-transparent;
+    @apply w-full border border-tinta-500 bg-white px-4 py-2 font-mono text-tinta-800 focus:outline-2 focus:outline-offset-1 focus:outline-marca-azul;
   }
 
   .label {
-    @apply block text-sm font-medium text-secondary-800 mb-1;
+    @apply rotulo mb-2 block;
   }
 
   .card {
-    @apply bg-cloud-50 rounded-lg shadow-soft p-3 sm:p-6;
+    @apply border border-tinta-500 bg-fundo p-4 sm:p-7;
   }
 
   .badge {
-    @apply inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium;
+    @apply inline-flex items-center border border-transparent px-2 py-1 font-mono text-[11px] font-semibold tracking-[0.08em] uppercase;
   }
 
   .badge-submitted {
-    @apply bg-secondary-800 text-cloud-50;
+    @apply bg-tinta-500 text-creme-100;
   }
 
   .badge-accepted {
-    @apply bg-green-200 text-green-800;
+    @apply bg-marca-verde text-creme-100;
   }
 
   .badge-rejected {
-    @apply bg-red-100 text-red-800;
+    @apply border-creme-600 text-creme-600;
   }
 
   .badge-waitlist {
-    @apply bg-orange-200 text-orange-700;
+    @apply bg-tinta-200 text-tinta-900;
   }
 
   .badge-draft {
-    @apply bg-cloud-100 text-cloud-700;
+    @apply bg-traco text-creme-600;
   }
 }

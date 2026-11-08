@@ -44,7 +44,7 @@ const Select = ({
       </select>
       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
         <svg
-          className="h-5 w-5 text-neutral-400"
+          className="text-tinta-500 h-5 w-5"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
