@@ -23,7 +23,7 @@ export default function Index({ oauth_providers }: IndexProps) {
     <Layout currentUser={user}>
       <div className="from-primary-500 to-primary-700 shadow-medium animate-fade-in mb-12 rounded-xl bg-gradient-to-b p-8 text-white">
         <h1 className="mb-4 text-3xl font-bold text-white md:text-4xl">
-          Call for Proposals - Tropical on Rails 26
+          Call for Proposals - Tropical on Rails 27
         </h1>
         <p className="text-cloud-50 max-w-3xl text-lg">
           <a
@@ -34,7 +34,7 @@ export default function Index({ oauth_providers }: IndexProps) {
           >
             Tropical on Rails
           </a>{" "}
-          returns for its 5th edition, welcoming 700 Rails enthusiasts for two
+          returns for its 8th edition, welcoming 700 Rails enthusiasts for two
           days of learning, energy, and celebration. Your talk could inspire
           hundreds of developers building products across Latin America and
           beyond.
@@ -42,7 +42,7 @@ export default function Index({ oauth_providers }: IndexProps) {
         <div className="text-primary-100 mt-8 flex flex-wrap gap-4">
           <div className="flex items-center">
             <CalendarIcon className="mr-2 h-5 w-5" />
-            <span>April 9-10, 2026</span>
+            <span>March 18-19, 2027</span>
           </div>
           <div className="flex items-center">
             <MapPinIcon className="mr-2 h-5 w-5" />
@@ -63,12 +63,12 @@ export default function Index({ oauth_providers }: IndexProps) {
             </h2>
             <div className="space-y-6">
               <ul className="list-disc space-y-2 pl-6">
-                <li>Deadline: January 14, 2026</li>
+                <li>Deadline: December 22, 2026</li>
                 <li>30-minute talks</li>
                 <li>Single-track</li>
                 <li>700 attendees</li>
                 <li>Ruby on Rails focus</li>
-                <li>April 9 & 10, 2026</li>
+                <li>March 18 & 19, 2027</li>
                 <li>São Paulo - Brazil</li>
               </ul>
             </div>
@@ -210,7 +210,7 @@ export default function Index({ oauth_providers }: IndexProps) {
               </ol>
               <p className="text-sm">
                 After the review process and internal discussions, we will
-                notify accepted speakers by the end of January. Feedback will
+                notify accepted speakers in the first week of January. Feedback will
                 then be sent to all submitters—whether approved, placed on the
                 waiting list, or rejected.
               </p>
