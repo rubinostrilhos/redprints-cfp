@@ -1,0 +1,24 @@
+config/puma.rb
+  s_a16db82386a042::t_8d4aef92009c6b 39-40,42-44
+  s_a16db82386a042::t_f018f5013ffa16 37-38
+config/database.yml
+  s_a16db82386a042::t_8d4aef92009c6b 9-10,17
+Dockerfile
+  s_a16db82386a042::t_8d4aef92009c6b 66
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "249972aa3713018857ba8bc713853289b1aeabb0",
+  "prompts": {},
+  "sessions": {
+    "s_a16db82386a042": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1ef88506-badf-45c2-a0b8-fd4f9616fc91",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Cirdes <cirdes@linkana.com>"
+    }
+  }
+}
