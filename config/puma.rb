@@ -34,7 +34,14 @@ port ENV.fetch("PORT", 3000)
 plugin :tmp_restart
 
 # Run the Solid Queue supervisor inside of Puma for single-server deployments
+# Pin single mode (one Ruby process) even if WEB_CONCURRENCY is set: in
+# production Puma booted a master plus one worker on a 512 MB instance.
+workers 0
+
 plugin :solid_queue
+# Run Solid Queue as threads inside Puma instead of forking a supervisor,
+# dispatcher and worker. Job volume is tiny; the forks cost ~300 MB.
+solid_queue_mode :async
 
 # Run litestream only when explicitly enabled. Without a configured replica
 # bucket the replicate process exits and the plugin stops Puma with it.

@@ -6,13 +6,15 @@
 #
 default: &default
   adapter: sqlite3
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  # Puma threads plus Solid Queue threads share this pool (async mode).
+  pool: 10
   timeout: 5000
   default_transaction_mode: IMMEDIATE
 
 queue: &queue
   adapter: sqlite3
   migrations_paths: db/queue_migrate
+  pool: 10
   timeout: 5000
   default_transaction_mode: IMMEDIATE
 
